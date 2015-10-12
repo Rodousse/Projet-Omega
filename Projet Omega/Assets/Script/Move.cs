@@ -27,7 +27,7 @@ public class Move : MonoBehaviour {
 		cam = Camera.main;
 	
 	}
-	
+	//
 	// Update is called once per frame
 	void Update () {
 
