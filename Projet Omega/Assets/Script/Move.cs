@@ -11,20 +11,23 @@ public class Move : MonoBehaviour {
 	public Transform wallCheck;
 	public Transform climbCheck;
 			
-	private Rigidbody2D rb2d;
-	private Camera cam;
-	private bool grounded = false;
-	private bool move = false;
-	private bool climb;
-	private bool jump;
-	private bool wall;
-	bool wallContinue = false;
-	private Vector3 direction;
+	private Rigidbody2D rb2d; // Lobjet courant
+	private Touch touch; // Recupere les infos du dernier touché
+	private Vector2 posBegin; // La position lorsque le doigt touche lecran utile pour un glissé
+	private Camera cam; // La camera princiale pour projeter le touché dans le monde
+	private bool grounded = false; // Si il touche le sol
+	private bool move = false; // si il peut et/ou bouge
+	private bool climb; // Si il est sur un rebord
+	private bool jump; // Si il peut sauter
+	private bool wall; // si il touche un mur
+	private bool wallContinue = false; // tant quil est sur un rebord
+	private Vector3 direction; // la direction que doit prendre l'objet courant
 
 	// Use this for initialization
 	void Start () {
 		rb2d = GetComponent<Rigidbody2D>();
 		cam = Camera.main;
+
 	
 	}
 	//
@@ -56,7 +59,7 @@ public class Move : MonoBehaviour {
 	{
 		if(move)// si il y a un mur on arrete d'avancer
 		{
-			if( transform.position.x < direction.x )
+			if( transform.position.x < direction.x ) 
 			{
 				Debug.Log("GoDroite");
 				if(!faceRight)
@@ -97,9 +100,7 @@ public class Move : MonoBehaviour {
 			rb2d.AddForce(new Vector2(0f, jumpForce)); // Saute
 			jump = false;
 		}
-
-
-		if(wall)
+		
 
 		if (wall && !wallContinue) {
 			// Grimper sur la plateforme
@@ -115,7 +116,7 @@ public class Move : MonoBehaviour {
 
 		if (climb) {
 			rb2d.velocity = new Vector2(0,rb2d.velocity.y);
-			rb2d.position = new Vector3(rb2d.position.x, rb2d.position.y + 0.5f);
+			rb2d.position = new Vector3(rb2d.position.x, rb2d.position.y + 0.7f);
 		}
 
 //		if (wall && climb) {
