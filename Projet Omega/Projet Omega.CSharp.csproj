@@ -51,17 +51,11 @@
     <Reference Include="UnityEngine">
       <HintPath>Library\UnityAssemblies\UnityEngine.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.Advertisements">
-      <HintPath>Library\UnityAssemblies\UnityEngine.Advertisements.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>Library\UnityAssemblies\UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Networking">
       <HintPath>Library\UnityAssemblies\UnityEngine.Networking.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.Analytics">
-      <HintPath>Library\UnityAssemblies\UnityEngine.Analytics.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor">
       <HintPath>Library\UnityAssemblies\UnityEditor.dll</HintPath>
@@ -74,7 +68,143 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Custom Assets\2D Toolkits\tk2d\Code\Camera\tk2dCamera.cs" />
+    <Compile Include="Assets\Custom Assets\2D Toolkits\tk2d\Code\Camera\tk2dCameraAnchor.cs" />
+    <Compile Include="Assets\Custom Assets\2D Toolkits\tk2d\Code\Camera\tk2dCameraUtil.cs" />
+    <Compile Include="Assets\Custom Assets\2D Toolkits\tk2d\Code\Fonts\tk2dFont.cs" />
+    <Compile Include="Assets\Custom Assets\2D Toolkits\tk2d\Code\Fonts\tk2dFontData.cs" />
+    <Compile Include="Assets\Custom Assets\2D Toolkits\tk2d\Code\Fonts\tk2dTextGeomGen.cs" />
+    <Compile Include="Assets\Custom Assets\2D Toolkits\tk2d\Code\Fonts\tk2dTextMesh.cs" />
+    <Compile Include="Assets\Custom Assets\2D Toolkits\tk2d\Code\Gui\tk2dButton.cs" />
+    <Compile Include="Assets\Custom Assets\2D Toolkits\tk2d\Code\Runtime\tk2dResource.cs" />
+    <Compile Include="Assets\Custom Assets\2D Toolkits\tk2d\Code\Runtime\tk2dSystem.cs" />
+    <Compile Include="Assets\Custom Assets\2D Toolkits\tk2d\Code\Runtime\tk2dUpdateManager.cs" />
+    <Compile Include="Assets\Custom Assets\2D Toolkits\tk2d\Code\Sprites\tk2dAnimatedSprite.cs" />
+    <Compile Include="Assets\Custom Assets\2D Toolkits\tk2d\Code\Sprites\tk2dBaseSprite.cs" />
+    <Compile Include="Assets\Custom Assets\2D Toolkits\tk2d\Code\Sprites\tk2dClippedSprite.cs" />
+    <Compile Include="Assets\Custom Assets\2D Toolkits\tk2d\Code\Sprites\tk2dEditorSpriteDataUnloader.cs" />
+    <Compile Include="Assets\Custom Assets\2D Toolkits\tk2d\Code\Sprites\tk2dPixelPerfectHelper.cs" />
+    <Compile Include="Assets\Custom Assets\2D Toolkits\tk2d\Code\Sprites\tk2dRuntimeSpriteCollection.cs" />
+    <Compile Include="Assets\Custom Assets\2D Toolkits\tk2d\Code\Sprites\tk2dSlicedSprite.cs" />
+    <Compile Include="Assets\Custom Assets\2D Toolkits\tk2d\Code\Sprites\tk2dSprite.cs" />
+    <Compile Include="Assets\Custom Assets\2D Toolkits\tk2d\Code\Sprites\tk2dSpriteAnimation.cs" />
+    <Compile Include="Assets\Custom Assets\2D Toolkits\tk2d\Code\Sprites\tk2dSpriteAnimator.cs" />
+    <Compile Include="Assets\Custom Assets\2D Toolkits\tk2d\Code\Sprites\tk2dSpriteAttachPoint.cs" />
+    <Compile Include="Assets\Custom Assets\2D Toolkits\tk2d\Code\Sprites\tk2dSpriteCollection.cs" />
+    <Compile Include="Assets\Custom Assets\2D Toolkits\tk2d\Code\Sprites\tk2dSpriteCollectionData.cs" />
+    <Compile Include="Assets\Custom Assets\2D Toolkits\tk2d\Code\Sprites\tk2dSpriteCollectionInterfaces.cs" />
+    <Compile Include="Assets\Custom Assets\2D Toolkits\tk2d\Code\Sprites\tk2dSpriteCollectionSize.cs" />
+    <Compile Include="Assets\Custom Assets\2D Toolkits\tk2d\Code\Sprites\tk2dSpriteFromTexture.cs" />
+    <Compile Include="Assets\Custom Assets\2D Toolkits\tk2d\Code\Sprites\tk2dSpriteGeomGen.cs" />
+    <Compile Include="Assets\Custom Assets\2D Toolkits\tk2d\Code\Sprites\tk2dStaticSpriteBatcher.cs" />
+    <Compile Include="Assets\Custom Assets\2D Toolkits\tk2d\Code\Sprites\tk2dTiledSprite.cs" />
+    <Compile Include="Assets\Custom Assets\2D Toolkits\tk2d\Code\tk2dUtil.cs" />
+    <Compile Include="Assets\Custom Assets\2D Toolkits\tk2dTileMap\Code\tk2dTileMap.cs" />
+    <Compile Include="Assets\Custom Assets\2D Toolkits\tk2dTileMap\Code\tk2dTileMapBuilderUtil.cs" />
+    <Compile Include="Assets\Custom Assets\2D Toolkits\tk2dTileMap\Code\tk2dTileMapChunks.cs" />
+    <Compile Include="Assets\Custom Assets\2D Toolkits\tk2dTileMap\Code\tk2dTileMapColliderBuilder.cs" />
+    <Compile Include="Assets\Custom Assets\2D Toolkits\tk2dTileMap\Code\tk2dTileMapColliderBuilder2D.cs" />
+    <Compile Include="Assets\Custom Assets\2D Toolkits\tk2dTileMap\Code\tk2dTileMapData.cs" />
+    <Compile Include="Assets\Custom Assets\2D Toolkits\tk2dTileMap\Code\tk2dTileMapMeshBuilder.cs" />
+    <Compile Include="Assets\Custom Assets\2D Toolkits\tk2dUI\Code\Controls\tk2dUIBaseItemControl.cs" />
+    <Compile Include="Assets\Custom Assets\2D Toolkits\tk2dUI\Code\Controls\tk2dUIDragItem.cs" />
+    <Compile Include="Assets\Custom Assets\2D Toolkits\tk2dUI\Code\Controls\tk2dUIDropDownItem.cs" />
+    <Compile Include="Assets\Custom Assets\2D Toolkits\tk2dUI\Code\Controls\tk2dUIDropDownMenu.cs" />
+    <Compile Include="Assets\Custom Assets\2D Toolkits\tk2dUI\Code\Controls\tk2dUIHoverItem.cs" />
+    <Compile Include="Assets\Custom Assets\2D Toolkits\tk2dUI\Code\Controls\tk2dUIMultiStateToggleButton.cs" />
+    <Compile Include="Assets\Custom Assets\2D Toolkits\tk2dUI\Code\Controls\tk2dUIProgressBar.cs" />
+    <Compile Include="Assets\Custom Assets\2D Toolkits\tk2dUI\Code\Controls\tk2dUIScrollableArea.cs" />
+    <Compile Include="Assets\Custom Assets\2D Toolkits\tk2dUI\Code\Controls\tk2dUIScrollbar.cs" />
+    <Compile Include="Assets\Custom Assets\2D Toolkits\tk2dUI\Code\Controls\tk2dUISoundItem.cs" />
+    <Compile Include="Assets\Custom Assets\2D Toolkits\tk2dUI\Code\Controls\tk2dUITextInput.cs" />
+    <Compile Include="Assets\Custom Assets\2D Toolkits\tk2dUI\Code\Controls\tk2dUIToggleButton.cs" />
+    <Compile Include="Assets\Custom Assets\2D Toolkits\tk2dUI\Code\Controls\tk2dUIToggleButtonGroup.cs" />
+    <Compile Include="Assets\Custom Assets\2D Toolkits\tk2dUI\Code\Controls\tk2dUIToggleControl.cs" />
+    <Compile Include="Assets\Custom Assets\2D Toolkits\tk2dUI\Code\Controls\tk2dUITweenItem.cs" />
+    <Compile Include="Assets\Custom Assets\2D Toolkits\tk2dUI\Code\Controls\tk2dUIUpDownButton.cs" />
+    <Compile Include="Assets\Custom Assets\2D Toolkits\tk2dUI\Code\Controls\tk2dUIUpDownHoverButton.cs" />
+    <Compile Include="Assets\Custom Assets\2D Toolkits\tk2dUI\Code\Core\tk2dUIAudioManager.cs" />
+    <Compile Include="Assets\Custom Assets\2D Toolkits\tk2dUI\Code\Core\tk2dUICamera.cs" />
+    <Compile Include="Assets\Custom Assets\2D Toolkits\tk2dUI\Code\Core\tk2dUIItem.cs" />
+    <Compile Include="Assets\Custom Assets\2D Toolkits\tk2dUI\Code\Core\tk2dUILayout.cs" />
+    <Compile Include="Assets\Custom Assets\2D Toolkits\tk2dUI\Code\Core\tk2dUILayoutContainer.cs" />
+    <Compile Include="Assets\Custom Assets\2D Toolkits\tk2dUI\Code\Core\tk2dUILayoutContainerSizer.cs" />
+    <Compile Include="Assets\Custom Assets\2D Toolkits\tk2dUI\Code\Core\tk2dUIManager.cs" />
+    <Compile Include="Assets\Custom Assets\2D Toolkits\tk2dUI\Code\Core\tk2dUIMask.cs" />
+    <Compile Include="Assets\Custom Assets\2D Toolkits\tk2dUI\Code\Core\tk2dUISpriteAnimator.cs" />
+    <Compile Include="Assets\Custom Assets\2D Toolkits\tk2dUI\Code\Core\tk2dUITime.cs" />
+    <Compile Include="Assets\Custom Assets\2D Toolkits\tk2dUI\Code\Core\tk2dUITouch.cs" />
+    <Compile Include="Assets\Custom Assets\Puppet2D\Scripts\Puppet2D_AngleLimitNode.cs" />
+    <Compile Include="Assets\Custom Assets\Puppet2D\Scripts\Puppet2D_BakeAnimation.cs" />
+    <Compile Include="Assets\Custom Assets\Puppet2D\Scripts\Puppet2D_Bakedmesh.cs" />
+    <Compile Include="Assets\Custom Assets\Puppet2D\Scripts\Puppet2D_EditSkinWeights.cs" />
+    <Compile Include="Assets\Custom Assets\Puppet2D\Scripts\Puppet2D_FFDLineDisplay.cs" />
+    <Compile Include="Assets\Custom Assets\Puppet2D\Scripts\Puppet2D_FFDStoreData.cs" />
+    <Compile Include="Assets\Custom Assets\Puppet2D\Scripts\Puppet2D_GlobalControl.cs" />
+    <Compile Include="Assets\Custom Assets\Puppet2D\Scripts\Puppet2D_HiddenBone.cs" />
+    <Compile Include="Assets\Custom Assets\Puppet2D\Scripts\Puppet2D_IKHandle.cs" />
+    <Compile Include="Assets\Custom Assets\Puppet2D\Scripts\Puppet2D_ParentControl.cs" />
+    <Compile Include="Assets\Custom Assets\Puppet2D\Scripts\Puppet2D_SkinnedVertices.cs" />
+    <Compile Include="Assets\Custom Assets\Puppet2D\Scripts\Puppet2D_SortingLayer.cs" />
+    <Compile Include="Assets\Custom Assets\Puppet2D\Scripts\Puppet2D_SplineControl.cs" />
+    <Compile Include="Assets\Custom Assets\Puppet2D\Scripts\Puppet2D_VertHandler.cs" />
+    <Compile Include="Assets\Custom Assets\Puppet2D\Scripts\Triangulation\Delaunay\DelaunayTriangle.cs" />
+    <Compile Include="Assets\Custom Assets\Puppet2D\Scripts\Triangulation\Delaunay\Sweep\AdvancingFront.cs" />
+    <Compile Include="Assets\Custom Assets\Puppet2D\Scripts\Triangulation\Delaunay\Sweep\AdvancingFrontNode.cs" />
+    <Compile Include="Assets\Custom Assets\Puppet2D\Scripts\Triangulation\Delaunay\Sweep\DTSweep.cs" />
+    <Compile Include="Assets\Custom Assets\Puppet2D\Scripts\Triangulation\Delaunay\Sweep\DTSweepBasin.cs" />
+    <Compile Include="Assets\Custom Assets\Puppet2D\Scripts\Triangulation\Delaunay\Sweep\DTSweepConstraint.cs" />
+    <Compile Include="Assets\Custom Assets\Puppet2D\Scripts\Triangulation\Delaunay\Sweep\DTSweepContext.cs" />
+    <Compile Include="Assets\Custom Assets\Puppet2D\Scripts\Triangulation\Delaunay\Sweep\DTSweepDebugContext.cs" />
+    <Compile Include="Assets\Custom Assets\Puppet2D\Scripts\Triangulation\Delaunay\Sweep\DTSweepEdgeEvent.cs" />
+    <Compile Include="Assets\Custom Assets\Puppet2D\Scripts\Triangulation\Delaunay\Sweep\DTSweepPointComparator.cs" />
+    <Compile Include="Assets\Custom Assets\Puppet2D\Scripts\Triangulation\Delaunay\Sweep\PointOnEdgeException.cs" />
+    <Compile Include="Assets\Custom Assets\Puppet2D\Scripts\Triangulation\ITriangulatable.cs" />
+    <Compile Include="Assets\Custom Assets\Puppet2D\Scripts\Triangulation\Orientation.cs" />
+    <Compile Include="Assets\Custom Assets\Puppet2D\Scripts\Triangulation\P2T.cs" />
+    <Compile Include="Assets\Custom Assets\Puppet2D\Scripts\Triangulation\Polygon\Contour.cs" />
+    <Compile Include="Assets\Custom Assets\Puppet2D\Scripts\Triangulation\Polygon\Polygon.cs" />
+    <Compile Include="Assets\Custom Assets\Puppet2D\Scripts\Triangulation\Polygon\PolygonPoint.cs" />
+    <Compile Include="Assets\Custom Assets\Puppet2D\Scripts\Triangulation\Polygon\PolygonSet.cs" />
+    <Compile Include="Assets\Custom Assets\Puppet2D\Scripts\Triangulation\Polygon\PolygonUtil.cs" />
+    <Compile Include="Assets\Custom Assets\Puppet2D\Scripts\Triangulation\Sets\ConstrainedPointSet.cs" />
+    <Compile Include="Assets\Custom Assets\Puppet2D\Scripts\Triangulation\Sets\PointSet.cs" />
+    <Compile Include="Assets\Custom Assets\Puppet2D\Scripts\Triangulation\TriangulationAlgorithm.cs" />
+    <Compile Include="Assets\Custom Assets\Puppet2D\Scripts\Triangulation\TriangulationConstraint.cs" />
+    <Compile Include="Assets\Custom Assets\Puppet2D\Scripts\Triangulation\TriangulationContext.cs" />
+    <Compile Include="Assets\Custom Assets\Puppet2D\Scripts\Triangulation\TriangulationDebugContext.cs" />
+    <Compile Include="Assets\Custom Assets\Puppet2D\Scripts\Triangulation\TriangulationMode.cs" />
+    <Compile Include="Assets\Custom Assets\Puppet2D\Scripts\Triangulation\TriangulationPoint.cs" />
+    <Compile Include="Assets\Custom Assets\Puppet2D\Scripts\Triangulation\Util\PointGenerator.cs" />
+    <Compile Include="Assets\Custom Assets\Puppet2D\Scripts\Triangulation\Util\PolygonGenerator.cs" />
+    <Compile Include="Assets\Custom Assets\Puppet2D\Scripts\Triangulation\Util\TriangulationUtil.cs" />
+    <Compile Include="Assets\Custom Assets\Puppet2D\Scripts\Triangulation\Utility\FixedArray3.cs" />
+    <Compile Include="Assets\Custom Assets\Puppet2D\Scripts\Triangulation\Utility\FixedBitArray3.cs" />
+    <Compile Include="Assets\Custom Assets\Puppet2D\Scripts\Triangulation\Utility\MathUtil.cs" />
+    <Compile Include="Assets\Custom Assets\Puppet2D\Scripts\Triangulation\Utility\Point2D.cs" />
+    <Compile Include="Assets\Custom Assets\Puppet2D\Scripts\Triangulation\Utility\Point2DList.cs" />
+    <Compile Include="Assets\Custom Assets\Puppet2D\Scripts\Triangulation\Utility\Rect2D.cs" />
     <Compile Include="Assets\Script\Move.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Custom Assets\2D Toolkits\tk2d\Editor\EditorUtility.shader" />
+    <None Include="Assets\Custom Assets\2D Toolkits\tk2d\Goodies\TexturePacker\Exporter\2dtoolkit\exporter.xml" />
+    <None Include="Assets\Custom Assets\2D Toolkits\tk2d\Shaders\AdditiveVertexColor.shader" />
+    <None Include="Assets\Custom Assets\2D Toolkits\tk2d\Shaders\Blend2TexVertexColor.shader" />
+    <None Include="Assets\Custom Assets\2D Toolkits\tk2d\Shaders\CutoutVertexColor.shader" />
+    <None Include="Assets\Custom Assets\2D Toolkits\tk2d\Shaders\LitBlendVertexColor.shader" />
+    <None Include="Assets\Custom Assets\2D Toolkits\tk2d\Shaders\LitCutoutVertexColor.shader" />
+    <None Include="Assets\Custom Assets\2D Toolkits\tk2d\Shaders\LitPremulVertexColor.shader" />
+    <None Include="Assets\Custom Assets\2D Toolkits\tk2d\Shaders\LitSolidVertexColor.shader" />
+    <None Include="Assets\Custom Assets\2D Toolkits\tk2d\Shaders\PremulVertexColor.shader" />
+    <None Include="Assets\Custom Assets\2D Toolkits\tk2d\Shaders\SolidVertexColor.shader" />
+    <None Include="Assets\Custom Assets\2D Toolkits\tk2d\Shaders\goodies\PackedTextMesh.shader" />
+    <None Include="Assets\Custom Assets\2D Toolkits\tk2d\Shaders\resources\BlendVertexColor.shader" />
+    <None Include="Assets\Custom Assets\2D Toolkits\tk2dUI\Shaders\DepthMask.shader" />
+    <None Include="Assets\Custom Assets\2D Toolkits\tk2dUI\Shaders\DepthMaskSolid.shader" />
+    <None Include="Assets\Custom Assets\Puppet2D\Shaders\BlackAndWhite.shader" />
+    <None Include="Assets\Custom Assets\Puppet2D\Shaders\VertColor.shader" />
+    <None Include="Assets\Custom Assets\Puppet2D\Shaders\unlitTransparentDouble.shader" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
 </Project>
