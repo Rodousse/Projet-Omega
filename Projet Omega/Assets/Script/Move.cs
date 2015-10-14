@@ -6,7 +6,7 @@ public class Move : MonoBehaviour {
 	public bool faceRight = true;
 	public float maxSpeed = 30f;
 	public float moveForce =  10f;
-	public float jumpForce = 500f;
+	public float jumpForce = 1000f;
 	public Transform groundCheck;
 	public Transform wallCheck;
 	public Transform climbCheck;
@@ -27,6 +27,9 @@ public class Move : MonoBehaviour {
 	void Start () {
 		rb2d = GetComponent<Rigidbody2D>();
 		cam = Camera.main;
+		maxSpeed = GameParameters.Instance.player_maxSpeed;
+		moveForce = GameParameters.Instance.player_moveForce;
+		jumpForce = GameParameters.Instance.player_jumpForce;
 
 	
 	}
