@@ -1,9 +1,11 @@
 fileFormatVersion: 2
 guid: 718ce78db00a23443a2c4711d5b8d612
-timeCreated: 1444719900
+timeCreated: 1444724268
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: Jambe_0
+    21300002: Jambe_1
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -29,8 +31,8 @@ TextureImporter:
   textureFormat: -1
   maxTextureSize: 2048
   textureSettings:
-    filterMode: -1
-    aniso: -1
+    filterMode: 0
+    aniso: 16
     mipBias: -1
     wrapMode: 1
   nPOTScale: 0
@@ -38,7 +40,7 @@ TextureImporter:
   rGBM: 0
   compressionQuality: 50
   allowsAlphaSplitting: 0
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -49,7 +51,17 @@ TextureImporter:
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: Jambe_0
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 27
+        width: 195
+        height: 480
+      alignment: 9
+      pivot: {x: .315020442, y: .874347985}
+      border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
   assetBundleName: 

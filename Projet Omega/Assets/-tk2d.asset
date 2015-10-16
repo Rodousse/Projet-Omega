@@ -14,4 +14,38 @@ MonoBehaviour:
   version: 4
   spriteAnimationIndex: []
   fontIndex: []
-  spriteCollectionIndex: []
+  spriteCollectionIndex:
+  - name: Decors
+    spriteCollectionGUID: 90234b072b6f73b4d8e9ba0adad7c6ba
+    spriteCollectionDataGUID: b63d55b48435c9047a878d0fd77c652e
+    spriteNames:
+    - Grass
+    - Iron wall (dark)
+    - Cage
+    - Iron box
+    - Iron wall (bright)
+    - Fire
+    - Dirt
+    - Box
+    spriteTextureGUIDs:
+    - 7e664ed3ab7449946b3d0f109487c761
+    - 41c10aa7e711e5544b3e5de300e54b7a
+    - 578a0ac9659a0204f82bad09f4af9bb2
+    - 56d8dcc9364b9b54587d0f561597618b
+    - bfe3882bcc4df1a47be5914075a50d5a
+    - f67ecf2b32eddac46ac419959b252592
+    - 2d9e593dca5b5e049aabdef2c06159a3
+    - 43614ecdc4a31754f9ff342b085b492b
+    spriteTextureTimeStamps:
+    - 1444845479.17124
+    - 1444845483.7817
+    - 1444845473.90263
+    - 1444845480.59802
+    - 1444845482.30007
+    - 1444845477.68012
+    - 1444845476.25417
+    - 1444845471.98879
+    managedSpriteCollection: 0
+    loadable: 0
+    assetName: 
+    version: 3
