@@ -7,6 +7,7 @@ TagManager:
   - GroundCheck
   - Wall
   - Ground
+  - Destructible
   layers:
   - Default
   - TransparentFX
@@ -18,7 +19,7 @@ TagManager:
   - 
   - Wall
   - Ground
-  - 
+  - Destructible
   - 
   - 
   - 
@@ -55,4 +56,7 @@ TagManager:
     locked: 1
   - name: Skeleton
     uniqueID: 1823863277
+    locked: 0
+  - name: Destructible
+    uniqueID: 1621241895
     locked: 0
