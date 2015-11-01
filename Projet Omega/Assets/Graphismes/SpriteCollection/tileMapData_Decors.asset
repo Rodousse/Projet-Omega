@@ -27,7 +27,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 109520, guid: 5c60ebb9859b3f449ab1d1b358dfb659, type: 2}
   tileInfo:
   - stringVal: 
     intVal: 0
@@ -84,12 +84,12 @@ MonoBehaviour:
     skipMeshGeneration: 0
     physicMaterial: {fileID: 0}
     physicsMaterial2D: {fileID: 0}
-  - name: Water
-    hash: 1289787032
+  - name: Destructible
+    hash: 2020588900
     useColor: 1
     generateCollider: 1
     z: 2
-    unityLayer: 4
+    unityLayer: 10
     sortingLayerName: 
     sortingOrder: 0
     skipMeshGeneration: 0

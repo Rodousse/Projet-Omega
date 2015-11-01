@@ -4,112 +4,167 @@ using System.Collections;
 public class Move : MonoBehaviour {
 	
 	public float maxSpeed;
-	public float moveForce;
-	public float jumpForce;
-	public float distanceArret;
-	public Transform groundCheck;
-	public GameObject wallCheck;
 
-	private Rigidbody2D rb2d;
-	private Animator animator;
-	private Camera cam;
-	public bool grounded;
-	public bool move;
-	public bool wall;
-	private float offset;
-    private int faceRight;
-	private Vector2 instantSpeed;
-	private Vector3 direction;
+	Collider2D groundCheck;
+	BoxCheck wallCheckR;
+	BoxCheck wallCheckL;
+	BoxCheck wallCheckTopR;
+	BoxCheck wallCheckTopL;
 
-	// Use this for initialization
-	void Start () {
+	Rigidbody2D rb2d;
+	Animator animator;
+	
+	bool isGrounded;
+	bool isWalled;
+	bool isJumping;
+	bool canJump;
+	bool willJump;
+	bool jump;
+	bool isFacingRight;
+
+	int sens;
+	float currentSpeed;
+
+	Vector3 destination;
+	Vector2 finalDestination;
+
+	void Start ()
+	{
+		groundCheck = GameObject.Find("Pied Collider").GetComponent<Collider2D>();
+		wallCheckR = GameObject.Find("WallCheck R").GetComponent<BoxCheck>();
+		wallCheckL = GameObject.Find("WallCheck L").GetComponent<BoxCheck>();
+		wallCheckTopR = GameObject.Find("WallCheck Top R").GetComponent<BoxCheck>();
+		wallCheckTopL = GameObject.Find("WallCheck Top L").GetComponent<BoxCheck>();
+
 		rb2d = GetComponent<Rigidbody2D>();
-		animator = GetComponent<Animator>();
-		cam = Camera.main;
-		direction.x = transform.position.x;
-
+		animator = GetComponentInChildren<Animator>();
+		
+		destination = new Vector3(transform.position.x, transform.position.y, transform.position.z);
 	}
-	//
-	// Update is called once per frame
-	void Update () {
 
-		if ((Physics2D.Linecast(transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("Ground"))) || (Physics2D.Linecast(transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("Wall"))))
-			grounded = true;
+	void Update ()
+	{
+		if (Input.GetButtonDown("Fire1") && isGrounded) // lors d'un clique donne la direction du singe
+		{
+			destination.x = RoundAbout(Camera.main.ScreenToWorldPoint(Input.mousePosition).x, 2.5f);
 
-		wall = wallCheck.GetComponent<BoxCheck>().value;
-
-		if (Input.GetButtonDown ("Fire1")) // lors d'un clique donne la direction du singe
-		{ 
-			direction = cam.ScreenToWorldPoint (Input.mousePosition);
-
-			offset = direction.x % 2.5f;
-
-			if (offset <= 1.25f)
-				direction.x -= offset;
-			else
-				direction.x += (2.5f - offset);
-
-			move = true;
-			if (transform.position.x < direction.x)
-				faceRight = -1;
-			else if (transform.position.x > direction.x)
-				faceRight = 1;
-			
-			flip();
+			UpdateFacing();
 		}
-
 	}
 
 	void FixedUpdate()
 	{
-		if (grounded)
+		UpdateSpeed();
+		UpdateCheckers();
+
+		if (jump)
 		{
-			if (move)// si il y a un mur on arrete d'avancer
+			if (isGrounded)
 			{
-				if (Mathf.Abs(rb2d.velocity.x) <= maxSpeed - 1)
+				if (willJump)
 				{
-					rb2d.AddForce(Vector2.right * faceRight * moveForce, ForceMode2D.Impulse);
-					if (Mathf.Abs(rb2d.velocity.x) > maxSpeed)
-						rb2d.velocity.Set(faceRight * maxSpeed, rb2d.velocity.y);
+					isJumping = true;
+                    rb2d.AddForce(Vector2.up * 20 + sens * Vector2.right * 6, ForceMode2D.Impulse);
+					animator.SetTrigger("Jump");
+					destination.x = RoundAbout(transform.position.x + sens * 2.5f, 2.5f);
 				}
-				else
-					rb2d.velocity.Set(faceRight * maxSpeed, rb2d.velocity.y);
+				willJump = false;
+			}
+			else
+				jump = false;
+		}
+		else
+		{
+			if (isGrounded) // Conditions préalables pour avancer
+			{
+				isJumping = false;
 
-				if (grounded && wall) // Sauter sur la plateforme
+                if (transform.position.x != destination.x && !jump)
 				{
-					rb2d.AddForce(new Vector2(faceRight * 4f, 12f) - rb2d.velocity, ForceMode2D.Impulse);
-					instantSpeed = rb2d.velocity;
-					move = false;
-				}
+					if (isWalled)
+					{
+						if(canJump)
+							if (destination.x > transform.position.x + 1.25f || destination.x < transform.position.x - 1.25f)
+								willJump = true;
 
-				if (transform.position.x > direction.x - distanceArret && transform.position.x < direction.x + distanceArret)
-				{
-					move = false;
-					instantSpeed = rb2d.velocity;
+						destination.x = RoundAbout(transform.position.x, 2.5f);
+					}
+
+					destination = new Vector3(destination.x, transform.position.y, transform.position.z);
+
+					rb2d.MovePosition(Vector2.MoveTowards(transform.position, destination, currentSpeed * Time.fixedDeltaTime));
+
+					// On se réaligne lorqu'on arrive très près de l'objectif
+					if (Mathf.Abs(transform.position.x - destination.x) < 0.01f)
+					{
+						transform.position = new Vector3(destination.x, transform.position.y, transform.position.z);
+						if (willJump)
+							jump = true;
+					}
 				}
 			}
-			else if (Mathf.Abs(transform.position.x - direction.x) < distanceArret) // si on atteint le seuil d'arret on ralentit
-			{
-				if (Mathf.Abs(transform.position.x - direction.x) < 0.1f && rb2d.velocity.x > 0.1f)
-				{
-					rb2d.velocity = new Vector2(0, rb2d.velocity.y);
-					transform.position = new Vector2(direction.x, transform.position.y);
-				}
-				else
-					rb2d.velocity = new Vector2( 0.1f + instantSpeed.x * Mathf.Cos((Mathf.Abs(transform.position.x - direction.x) - distanceArret) / distanceArret * Mathf.PI / 2), rb2d.velocity.y);
-			}
+			else if(!isJumping)
+				rb2d.velocity = new Vector2(rb2d.velocity.x * 0.9f, rb2d.velocity.y);
+        }
+	}
+
+	void UpdateSpeed()
+	{
+		// Décélération si on arrive à 1.25 de l'objectif sinon currentSpeed = maxSpeed
+		currentSpeed = Mathf.Lerp(0.1f, maxSpeed, Mathf.Abs(transform.position.x - destination.x) / 1.25f);
+
+		animator.SetFloat("Vitesse", currentSpeed);
+	}
+
+	void UpdateCheckers()
+	{
+		isGrounded = groundCheck.IsTouchingLayers();
+
+		if (isFacingRight)
+		{
+			isWalled = wallCheckR.value;
+			canJump = !wallCheckTopR.value;
+		}
+		else
+		{
+			isWalled = wallCheckL.value;
+			canJump = !wallCheckTopL.value;
 		}
 	}
 
-
-	void flip()
+	void UpdateFacing()
 	{
-		if (faceRight == 1)
-			GetComponent<Puppet2D_GlobalControl>().flip = true;
+		// MAJ de isFacingRight, isWalled, canJump et du flip en fonction de la direction
+
+		if (transform.position.x <= destination.x)
+		{
+			isFacingRight = true;
+			sens = 1;
+			GetComponentInChildren<Puppet2D_GlobalControl>().flip = false;
+			isWalled = wallCheckL.value;
+			canJump = !wallCheckTopL.value;
+		}
 		else
-			GetComponent<Puppet2D_GlobalControl>().flip = false;
-		
-		faceRight = -faceRight;
-		rb2d.AddForce(new Vector2(-rb2d.velocity.x,0), ForceMode2D.Impulse);
+		{
+			isFacingRight = false;
+			sens = -1;
+			GetComponentInChildren<Puppet2D_GlobalControl>().flip = true;
+			isWalled = wallCheckR.value;
+			canJump = !wallCheckTopR.value;
+		}
+	}
+
+	float RoundAbout(float INPUT, float x)
+	{
+		// Arrondi a à x près
+
+		float offset = INPUT % x;
+
+		if (offset <= x / 2)
+			INPUT -= offset;
+		else
+			INPUT += (x - offset);
+
+		return INPUT;
 	}
 }

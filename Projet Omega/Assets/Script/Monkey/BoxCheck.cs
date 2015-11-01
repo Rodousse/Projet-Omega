@@ -15,5 +15,5 @@ public class BoxCheck : MonoBehaviour
 	void OnTriggerExit2D(Collider2D other)
 	{
 		value = false;
-    }
+	}
 }
