@@ -95,3 +95,14 @@ MonoBehaviour:
     skipMeshGeneration: 0
     physicMaterial: {fileID: 0}
     physicsMaterial2D: {fileID: 0}
+  - name: PremierPlan
+    hash: 1003156500
+    useColor: 1
+    generateCollider: 1
+    z: 3
+    unityLayer: 0
+    sortingLayerName: 
+    sortingOrder: 0
+    skipMeshGeneration: 0
+    physicMaterial: {fileID: 0}
+    physicsMaterial2D: {fileID: 0}

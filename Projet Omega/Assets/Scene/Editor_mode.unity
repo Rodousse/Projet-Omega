@@ -85,6 +85,33 @@ NavMeshSettings:
     cellSize: .166666672
     manualCellSize: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &139873773
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 139873774}
+  m_Layer: 8
+  m_Name: PremierPlan
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &139873774
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 139873773}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -6}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1270276614}
+  m_RootOrder: 4
 --- !u!1 &178360271
 GameObject:
   m_ObjectHideFlags: 0
@@ -447,7 +474,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 805417729}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: Destructible
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -501,7 +528,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1270276614}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: TileMap Render Data
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -522,6 +549,7 @@ Transform:
   - {fileID: 1657587704}
   - {fileID: 853923793}
   - {fileID: 805417729}
+  - {fileID: 139873774}
   m_Father: {fileID: 1820722776}
   m_RootOrder: 0
 --- !u!1 &1290392187
@@ -856,7 +884,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1381445170}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Prefabs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1003,7 +1031,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1657587704}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1061,7 +1089,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
+  m_SortingLayerID: -872726573
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 234f1a0a9e8b5634fbac223d9f7262f1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1097,7 +1125,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1820722776}
   - 114: {fileID: 1820722777}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: TileMap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1187,6 +1215,22 @@ MonoBehaviour:
     divX: 32
     divY: 32
     gameObject: {fileID: 805417728}
+  - hash: 1003156500
+    spriteChannel:
+      chunks:
+      - spriteIds: 
+        gameObject: {fileID: 0}
+        mesh: {fileID: 0}
+        meshCollider: {fileID: 0}
+        colliderMesh: {fileID: 0}
+        edgeColliders: []
+    width: 15
+    height: 8
+    numColumns: 1
+    numRows: 1
+    divX: 32
+    divY: 32
+    gameObject: {fileID: 139873773}
   colorChannel:
     clearColor: {r: 1, g: 1, b: 1, a: 1}
     chunks: []
@@ -1236,8 +1280,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingOrder: 2
+  m_SortingLayerID: -872726573
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 76bda98d1bf2d440c867877d04e0f539, type: 3}
   m_Color: {r: 0, g: 1, b: 0, a: .503000021}
 --- !u!4 &1842126753
