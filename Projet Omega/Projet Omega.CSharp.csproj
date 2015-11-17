@@ -186,6 +186,8 @@
     <Compile Include="Assets\Custom Assets\Puppet2D\Scripts\Triangulation\Utility\Rect2D.cs" />
     <Compile Include="Assets\Script\Destructibles\DestroyOnClick.cs" />
     <Compile Include="Assets\Script\Editeur\Controleur.cs" />
+    <Compile Include="Assets\Script\Editeur\UI_MANAGER.cs" />
+    <Compile Include="Assets\Script\Editeur\UI_Palette.cs" />
     <Compile Include="Assets\Script\Monkey\BoxCheck.cs" />
     <Compile Include="Assets\Script\Monkey\Move.cs" />
   </ItemGroup>

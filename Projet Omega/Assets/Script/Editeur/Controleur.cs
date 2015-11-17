@@ -1,45 +1,101 @@
 ﻿using UnityEngine;
-using System.Collections;
 
 public class Controleur : MonoBehaviour
 {
-
 	public tk2dTileMap TileMap;
 
-	int CurrentPosition_X, CurrentPosition_Y;
+	public GameObject PreviewBloc;
 
-	public Transform curseur;
+	public Transform PreviewTile;
 
-	Vector3 CameraMaximums;
+	Vector3 MousePosition, BlocPosition;
+
+	int TileID, ToolID;
 
 	void Start()
 	{
-		CurrentPosition_X = -1;
-		CurrentPosition_Y = -1;
-
-		CameraMaximums.x = Screen.width;
-		CameraMaximums.y = Screen.height;
-    }
+		MousePosition.z = 0;
+	}
 
 	void Update()
 	{
-		CurrentPosition_X = (int)((Camera.main.ScreenToWorldPoint(Input.mousePosition).x) / (Camera.main.ScreenToWorldPoint(CameraMaximums).x) * 15);
-		CurrentPosition_Y = (int)((Camera.main.ScreenToWorldPoint(Input.mousePosition).y) / (Camera.main.ScreenToWorldPoint(CameraMaximums).y) * 8);
+		if (Input.GetButton("Fire1"))
+		{
+			MousePosition.x = Camera.main.ScreenToWorldPoint(Input.mousePosition).x + 1.25f;
+            MousePosition.y = Camera.main.ScreenToWorldPoint(Input.mousePosition).y;
 
-		curseur.position = new Vector3(CurrentPosition_X * 2.5f, CurrentPosition_Y * 2.5f, curseur.position.z);
+			PreviewBloc.transform.position = new Vector3(MousePosition.x - 1.25f, MousePosition.y, 0);
 
-		Debug.Log("X = " + CurrentPosition_X + " , Y = " + CurrentPosition_Y);
-	}
+			MousePosition.x = MousePosition.x - MousePosition.x % 2.5f;
+            MousePosition.y = MousePosition.y - MousePosition.y % 2.5f;
 
-	void SelectPosition(int x, int y)
-	{
-
+			PreviewTile.transform.position = new Vector3(MousePosition.x, MousePosition.y + 1.25f, 0);
+			
+		}
+		else if(Input.GetButtonUp("Fire1"))
+		{
+			PreviewTile.transform.position = new Vector3(-2, 0, 0);
+			PreviewBloc.transform.position = new Vector3(-2,0, 0);
+			Placer();
+		}
 	}
 
 	public void Placer()
 	{
 		TileMap.BeginEditMode();
-		TileMap.SetTile(CurrentPosition_X, CurrentPosition_Y, 1, 1);
+		TileMap.SetTile((int) (MousePosition.x / 2.5f), (int) (MousePosition.y / 2.5f), 1, TileID);
 		TileMap.EndEditMode();
 	}
+
+	public void setTool(string INPUT)
+	{
+		switch (INPUT)
+		{
+			case "Eraser":
+				ToolID = 0;
+				break;
+			case "Pen":
+				ToolID = 1;
+				break;
+			case "Brush":
+				ToolID = 2;
+				break;
+			default:
+				break;
+		}
+	}
+
+	public void setTile(string INPUT)
+	{
+		print("set tile");
+
+		switch (INPUT)
+		{
+			case "Box":
+				TileID = 7;
+				break;
+			case "Dirt":
+				TileID = 6;
+                break;
+			case "Grass":
+				TileID = 0;
+                break;
+			case "IronBox":
+				TileID = 3;
+                break;
+			case "IronWall1":
+				TileID = 4;
+                break;
+			case "IronWall2":
+				TileID = 1;
+                break;
+			default:
+				break;
+		}
+	}
+
+	public void ChangePreviewSprite(Sprite INPUT)
+	{
+		PreviewBloc.GetComponent<SpriteRenderer>().sprite = INPUT;
+    }
 }
