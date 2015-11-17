@@ -27,6 +27,12 @@ MonoBehaviour:
     - Fire
     - Dirt
     - Box
+    - Banana
+    - Light
+    - Sans titre-1
+    - Sans titre-3
+    - Sans titre-4
+    - Sans titre-2
     spriteTextureGUIDs:
     - 7e664ed3ab7449946b3d0f109487c761
     - 41c10aa7e711e5544b3e5de300e54b7a
@@ -36,15 +42,27 @@ MonoBehaviour:
     - f67ecf2b32eddac46ac419959b252592
     - 2d9e593dca5b5e049aabdef2c06159a3
     - 43614ecdc4a31754f9ff342b085b492b
+    - 44777b6eccdb0d04580a89cf177104ce
+    - caba9e9e008732a4b85ebe390aa94dc4
+    - 9ea337f49c74c9e44a6088a16618adfb
+    - 853f9b1811a6b3b41b38ca00657fe5c3
+    - 7ca88648d5152e74c981e8be0418cded
+    - 52ff280e679bc804cbfc72c79eb214a8
     spriteTextureTimeStamps:
-    - 1445018419.22565
-    - 1445018419.23666
-    - 1445018419.21464
-    - 1445018419.22665
-    - 1445018419.23166
-    - 1445018419.22065
-    - 1445018419.21865
-    - 1445018419.21064
+    - 1445018579.24702
+    - 1445018579.25302
+    - 1447799497.76249
+    - 1445018579.24902
+    - 1445018579.25202
+    - 1445018579.24602
+    - 1445018579.24402
+    - 1445018579.24101
+    - 1447799497.76049
+    - 1447799497.76349
+    - 1447804426
+    - 1447804488
+    - 1447804520
+    - 1447804454
     managedSpriteCollection: 0
     loadable: 0
     assetName: 

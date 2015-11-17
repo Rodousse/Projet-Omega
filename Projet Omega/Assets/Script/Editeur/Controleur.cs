@@ -10,7 +10,7 @@ public class Controleur : MonoBehaviour
 
 	Vector3 MousePosition, BlocPosition;
 
-	int TileID, ToolID;
+	int TileID = 0, LayerID = 0, ToolID;
 
 	void Start()
 	{
@@ -43,7 +43,7 @@ public class Controleur : MonoBehaviour
 	public void Placer()
 	{
 		TileMap.BeginEditMode();
-		TileMap.SetTile((int) (MousePosition.x / 2.5f), (int) (MousePosition.y / 2.5f), 1, TileID);
+		TileMap.SetTile((int) (MousePosition.x / 2.5f), (int) (MousePosition.y / 2.5f), LayerID, TileID);
 		TileMap.EndEditMode();
 	}
 
@@ -73,22 +73,36 @@ public class Controleur : MonoBehaviour
 		{
 			case "Box":
 				TileID = 7;
-				break;
+				LayerID = 2;
+                break;
 			case "Dirt":
 				TileID = 6;
-                break;
+				LayerID = 0;
+				break;
 			case "Grass":
 				TileID = 0;
-                break;
+				LayerID = 0;
+				break;
 			case "IronBox":
 				TileID = 3;
-                break;
+				LayerID = 0;
+				break;
 			case "IronWall1":
 				TileID = 4;
-                break;
+				LayerID = 1;
+				break;
 			case "IronWall2":
 				TileID = 1;
-                break;
+				LayerID = 1;
+				break;
+			case "Fire":
+				TileID = 5;
+				LayerID = 2;
+				break;
+			case "Light":
+				TileID = 9;
+				LayerID = 3;
+				break;
 			default:
 				break;
 		}
