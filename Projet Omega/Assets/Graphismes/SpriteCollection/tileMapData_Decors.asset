@@ -74,6 +74,22 @@ MonoBehaviour:
   - stringVal: 
     intVal: 0
     floatVal: 0
+    enablePrefabOffset: 1
+  - stringVal: 
+    intVal: 0
+    floatVal: 0
+    enablePrefabOffset: 0
+  - stringVal: 
+    intVal: 0
+    floatVal: 0
+    enablePrefabOffset: 0
+  - stringVal: 
+    intVal: 0
+    floatVal: 0
+    enablePrefabOffset: 0
+  - stringVal: 
+    intVal: 0
+    floatVal: 0
     enablePrefabOffset: 0
   tileMapLayers:
   - name: Ground

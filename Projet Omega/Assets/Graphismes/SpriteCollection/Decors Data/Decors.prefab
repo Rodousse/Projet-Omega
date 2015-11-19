@@ -520,17 +520,17 @@ MonoBehaviour:
     attachPoints: []
   - name: Light
     boundsData:
-    - {x: .00499999523, y: -1.23500001, z: 0}
+    - {x: .00499999523, y: .0149999857, z: 0}
     - {x: 1.19000006, y: 2.47000003, z: 0}
     untrimmedBoundsData:
-    - {x: 0, y: -1.25, z: 0}
+    - {x: 0, y: 0, z: 0}
     - {x: 2.5, y: 2.5, z: 0}
     texelSize: {x: .00999999978, y: .00999999978}
     positions:
-    - {x: -.590000033, y: -2.47000003, z: 0}
-    - {x: .600000024, y: -2.47000003, z: 0}
-    - {x: -.590000033, y: 0, z: 0}
-    - {x: .600000024, y: 0, z: 0}
+    - {x: -.590000033, y: -1.22000003, z: 0}
+    - {x: .600000024, y: -1.22000003, z: 0}
+    - {x: -.590000033, y: 1.25, z: 0}
+    - {x: .600000024, y: 1.25, z: 0}
     normals:
     - {x: 0, y: 0, z: -1}
     - {x: 0, y: 0, z: -1}
@@ -790,7 +790,7 @@ MonoBehaviour:
   loadable: 0
   invOrthoSize: 2
   halfTargetHeight: 50
-  buildKey: 658971966
+  buildKey: 1062250012
   dataGuid: b63d55b48435c9047a878d0fd77c652e
   managedSpriteCollection: 0
   hasPlatformData: 0
