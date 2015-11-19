@@ -8,17 +8,21 @@ public class ChoixEvents : MonoBehaviour {
 	Controleur Editeur;
 	UI_Palette Palette;
 
-	void Start () {
+	bool Fade = false;
+
+	void Start ()
+	{
 		Image = GetComponent<RawImage>();
 		Editeur = GetComponentInParent<Controleur>();
 		Palette = GetComponentInParent<UI_Palette>();
 
-		EventTrigger thisEventTrigger = GetComponent<EventTrigger>();
+		InvokeRepeating("UpdateAlpha", 0, Time.deltaTime);
 	}
 	
 	public void Begin()
 	{
-		Image.enabled = false;
+		Fade = true;
+
 		Palette.Shift();
         Editeur.setTile(gameObject.name);
     }
@@ -30,7 +34,16 @@ public class ChoixEvents : MonoBehaviour {
 
 	public void End()
 	{
-		Image.enabled = true;
+		Fade = false;
+		
 		Editeur.Placer();
+	}
+
+	void UpdateAlpha()
+	{
+		if (Fade && Image.color.a > 0)
+			Image.color = new Color(1, 1, 1, Image.color.a - 0.1f);
+		else if (!Fade && Image.color.a < 1)
+			Image.color = new Color(1, 1, 1, Image.color.a + 0.1f);
 	}
 }
