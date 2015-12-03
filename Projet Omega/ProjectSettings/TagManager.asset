@@ -17,9 +17,9 @@ TagManager:
   - UI
   - 
   - 
-  - Wall
-  - Ground
-  - Destructible
+  - TileMap
+  - 
+  - 
   - Unselectable
   - 
   - 
@@ -54,9 +54,12 @@ TagManager:
   - name: Player
     uniqueID: 2677574631
     locked: 1
+  - name: Destructible
+    uniqueID: 1621241895
+    locked: 0
   - name: Skeleton
     uniqueID: 1823863277
     locked: 0
-  - name: Destructible
-    uniqueID: 1621241895
+  - name: UI
+    uniqueID: 3422240723
     locked: 0

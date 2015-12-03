@@ -25,9 +25,15 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 169594, guid: c0bfb955587bd1c429750163c551875f, type: 2}
   - {fileID: 0}
   - {fileID: 109520, guid: 5c60ebb9859b3f449ab1d1b358dfb659, type: 2}
+  - {fileID: 0}
+  - {fileID: 196688, guid: 8388630a8b40bec448d0d53559b8d01d, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   tileInfo:
   - stringVal: 
     intVal: 0
@@ -61,14 +67,38 @@ MonoBehaviour:
     intVal: 0
     floatVal: 0
     enablePrefabOffset: 0
+  - stringVal: 
+    intVal: 0
+    floatVal: 0
+    enablePrefabOffset: 0
+  - stringVal: 
+    intVal: 0
+    floatVal: 0
+    enablePrefabOffset: 1
+  - stringVal: 
+    intVal: 0
+    floatVal: 0
+    enablePrefabOffset: 0
+  - stringVal: 
+    intVal: 0
+    floatVal: 0
+    enablePrefabOffset: 0
+  - stringVal: 
+    intVal: 0
+    floatVal: 0
+    enablePrefabOffset: 0
+  - stringVal: 
+    intVal: 0
+    floatVal: 0
+    enablePrefabOffset: 0
   tileMapLayers:
   - name: Ground
     hash: 1892887448
     useColor: 1
     generateCollider: 1
     z: 0
-    unityLayer: 9
-    sortingLayerName: 
+    unityLayer: 8
+    sortingLayerName: Default
     sortingOrder: 0
     skipMeshGeneration: 0
     physicMaterial: {fileID: 0}
@@ -77,9 +107,9 @@ MonoBehaviour:
     hash: 1166427102
     useColor: 1
     generateCollider: 1
-    z: 1
+    z: .100000001
     unityLayer: 8
-    sortingLayerName: 
+    sortingLayerName: Default
     sortingOrder: 0
     skipMeshGeneration: 0
     physicMaterial: {fileID: 0}
@@ -88,9 +118,31 @@ MonoBehaviour:
     hash: 2020588900
     useColor: 1
     generateCollider: 1
-    z: 2
-    unityLayer: 10
-    sortingLayerName: 
+    z: .200000003
+    unityLayer: 8
+    sortingLayerName: Default
+    sortingOrder: 0
+    skipMeshGeneration: 0
+    physicMaterial: {fileID: 0}
+    physicsMaterial2D: {fileID: 0}
+  - name: PremierPlan
+    hash: 1003156500
+    useColor: 1
+    generateCollider: 1
+    z: .300000012
+    unityLayer: 8
+    sortingLayerName: Default
+    sortingOrder: 0
+    skipMeshGeneration: 0
+    physicMaterial: {fileID: 0}
+    physicsMaterial2D: {fileID: 0}
+  - name: Overlay
+    hash: 748115119
+    useColor: 1
+    generateCollider: 1
+    z: 5
+    unityLayer: 8
+    sortingLayerName: Default
     sortingOrder: 0
     skipMeshGeneration: 0
     physicMaterial: {fileID: 0}
