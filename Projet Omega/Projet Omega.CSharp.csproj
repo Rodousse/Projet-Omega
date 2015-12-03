@@ -51,11 +51,17 @@
     <Reference Include="UnityEngine">
       <HintPath>Library\UnityAssemblies\UnityEngine.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEngine.Advertisements">
+      <HintPath>Library\UnityAssemblies\UnityEngine.Advertisements.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>Library\UnityAssemblies\UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Networking">
       <HintPath>Library\UnityAssemblies\UnityEngine.Networking.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Analytics">
+      <HintPath>Library\UnityAssemblies\UnityEngine.Analytics.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor">
       <HintPath>Library\UnityAssemblies\UnityEditor.dll</HintPath>
@@ -184,11 +190,13 @@
     <Compile Include="Assets\Custom Assets\Puppet2D\Scripts\Triangulation\Utility\Point2D.cs" />
     <Compile Include="Assets\Custom Assets\Puppet2D\Scripts\Triangulation\Utility\Point2DList.cs" />
     <Compile Include="Assets\Custom Assets\Puppet2D\Scripts\Triangulation\Utility\Rect2D.cs" />
-    <Compile Include="Assets\Script\Destructibles\DestroyOnClick.cs" />
+    <Compile Include="Assets\Custom Assets\SingletonPerfect\Singleton.cs" />
+    <Compile Include="Assets\Script\Destructibles\Caisse_Bois.cs" />
     <Compile Include="Assets\Script\Editeur\ChoixEvents.cs" />
     <Compile Include="Assets\Script\Editeur\Controleur.cs" />
     <Compile Include="Assets\Script\Editeur\UI_Palette.cs" />
-    <Compile Include="Assets\Script\Monkey\BoxCheck.cs" />
+    <Compile Include="Assets\Script\Managers\ClickManager.cs" />
+    <Compile Include="Assets\Script\Monkey\Detector.cs" />
     <Compile Include="Assets\Script\Monkey\Move.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -68,7 +68,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Plugins\SquarePieStudios Tools\Scripts\Tools\Singletons\Singleton.cs" />
+    <Compile Include="Assets\Plugins\SquarePieStudios Tools\Example\Tools\Singletons\ExampleLogger\ExampleCustomLogger.cs" />
+    <Compile Include="Assets\Plugins\SquarePieStudios Tools\Example\Tools\Singletons\ExampleLogger\ExampleLoggers.cs" />
+    <Compile Include="Assets\Plugins\SquarePieStudios Tools\Example\Tools\Singletons\ExampleLogger\ExampleSceneTextBox.cs" />
+    <Compile Include="Assets\Plugins\SquarePieStudios Tools\Example\Tools\Singletons\ExampleSceneBase.cs" />
+    <Compile Include="Assets\Plugins\SquarePieStudios Tools\Example\Tools\Singletons\ExampleSceneHandler.cs" />
+    <Compile Include="Assets\Plugins\SquarePieStudios Tools\Example\Tools\Singletons\ExampleSceneHandler_DI.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Custom Assets\2D Toolkits\tk2d\Editor\EditorUtility.shader" />
@@ -89,7 +94,6 @@
     <None Include="Assets\Custom Assets\Puppet2D\Shaders\BlackAndWhite.shader" />
     <None Include="Assets\Custom Assets\Puppet2D\Shaders\VertColor.shader" />
     <None Include="Assets\Custom Assets\Puppet2D\Shaders\unlitTransparentDouble.shader" />
-    <None Include="Assets\Plugins\SquarePieStudios Tools\readme-singleton.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
 </Project>

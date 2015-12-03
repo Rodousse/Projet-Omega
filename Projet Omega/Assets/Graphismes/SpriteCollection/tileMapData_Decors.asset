@@ -98,7 +98,7 @@ MonoBehaviour:
     generateCollider: 1
     z: 0
     unityLayer: 8
-    sortingLayerName: 
+    sortingLayerName: Default
     sortingOrder: 0
     skipMeshGeneration: 0
     physicMaterial: {fileID: 0}
@@ -109,7 +109,7 @@ MonoBehaviour:
     generateCollider: 1
     z: .100000001
     unityLayer: 8
-    sortingLayerName: 
+    sortingLayerName: Default
     sortingOrder: 0
     skipMeshGeneration: 0
     physicMaterial: {fileID: 0}
@@ -120,7 +120,7 @@ MonoBehaviour:
     generateCollider: 1
     z: .200000003
     unityLayer: 8
-    sortingLayerName: 
+    sortingLayerName: Default
     sortingOrder: 0
     skipMeshGeneration: 0
     physicMaterial: {fileID: 0}
@@ -131,7 +131,18 @@ MonoBehaviour:
     generateCollider: 1
     z: .300000012
     unityLayer: 8
-    sortingLayerName: 
+    sortingLayerName: Default
+    sortingOrder: 0
+    skipMeshGeneration: 0
+    physicMaterial: {fileID: 0}
+    physicsMaterial2D: {fileID: 0}
+  - name: Overlay
+    hash: 748115119
+    useColor: 1
+    generateCollider: 1
+    z: 5
+    unityLayer: 8
+    sortingLayerName: Default
     sortingOrder: 0
     skipMeshGeneration: 0
     physicMaterial: {fileID: 0}
