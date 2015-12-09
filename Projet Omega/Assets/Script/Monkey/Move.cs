@@ -22,7 +22,7 @@ public class Move : MonoBehaviour {
 	bool willJump;
 	bool jump;
 	bool isFacingRight;
-	bool willActivate;
+	bool willActivateInteractible;
 
 	int sens;
 	float currentSpeed;
@@ -49,6 +49,8 @@ public class Move : MonoBehaviour {
 
 	public void SetfinalDestination(bool isDestructible = false)
 	{
+		willActivateInteractible = false;
+
 		if (isGrounded)
 		{
 			finalDestination.x = destination.x = RoundAbout(Camera.main.ScreenToWorldPoint(Input.mousePosition).x, 2.5f);
@@ -56,7 +58,7 @@ public class Move : MonoBehaviour {
 
 			if (isDestructible)
 			{
-				willActivate = true;
+				willActivateInteractible = true;
 
 				if (isFacingRight)
 					finalDestination.x -= 2.5f;
@@ -133,9 +135,9 @@ public class Move : MonoBehaviour {
 
 		if (transform.position.x != destination.x) // Si on a changé la destinaion poour aller sur le prochain cube,
 			destination = finalDestination;
-		else if(willActivate) // Sinon si on doit activer le cube et que l'on est à la finaldestination
+		else if(willActivateInteractible) // Sinon si on doit activer le cube et que l'on est à la finaldestination
 		{
-			willActivate = false;
+			willActivateInteractible = false;
 			if (isFacingRight)
 			{
 				wallCheckR.GetComponent<Detector>().target.GetComponent<Caisse_Bois>().Activate();
