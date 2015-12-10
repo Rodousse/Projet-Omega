@@ -1,119 +1,14 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &101052
-GameObject:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 459836}
-  m_Layer: 8
-  m_Name: Wall
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!1 &109952
-GameObject:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 431660}
-  m_Layer: 8
-  m_Name: Ground
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!1 &146992
-GameObject:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 455560}
-  m_Layer: 8
-  m_Name: Overlay
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!1 &149696
-GameObject:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 423386}
-  m_Layer: 8
-  m_Name: Destructible
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!1 &153214
+--- !u!1 &100752
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 489374}
-  m_Layer: 8
-  m_Name: TileMap Render Data
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!1 &164628
-GameObject:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 469598}
-  m_Layer: 8
-  m_Name: PremierPlan
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!1 &181872
-GameObject:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 402882}
-  m_Layer: 8
-  m_Name: Prefabs
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!1 &187628
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 416404}
-  - 114: {fileID: 11401198}
+  - 4: {fileID: 491466}
+  - 114: {fileID: 11409966}
   m_Layer: 8
   m_Name: TileMap
   m_TagString: Untagged
@@ -121,115 +16,24 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &402882
+--- !u!4 &491466
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 181872}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 489374}
-  m_RootOrder: 0
---- !u!4 &416404
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 187628}
+  m_GameObject: {fileID: 100752}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1.25, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 489374}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!4 &423386
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 149696}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -.300000012}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 489374}
-  m_RootOrder: 3
---- !u!4 &431660
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 109952}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 489374}
-  m_RootOrder: 1
---- !u!4 &455560
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 146992}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -5.5999999}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 489374}
-  m_RootOrder: 5
---- !u!4 &459836
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 101052}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -.100000001}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 489374}
-  m_RootOrder: 2
---- !u!4 &469598
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 164628}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -.600000024}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 489374}
-  m_RootOrder: 4
---- !u!4 &489374
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 153214}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 402882}
-  - {fileID: 431660}
-  - {fileID: 459836}
-  - {fileID: 423386}
-  - {fileID: 469598}
-  - {fileID: 455560}
-  m_Father: {fileID: 416404}
-  m_RootOrder: 0
---- !u!114 &11401198
+--- !u!114 &11409966
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 187628}
+  m_GameObject: {fileID: 100752}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d77403963ccc13b4bb3544092ec7858f, type: 3}
@@ -237,13 +41,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   editorDataGUID: 5030ae4c9f3a8c142b0a8434f6530ce1
   data: {fileID: 11400000, guid: 62efa4041c43d1042bd3ec0b672e811b, type: 2}
-  renderData: {fileID: 153214}
+  renderData: {fileID: 0}
   spriteCollection: {fileID: 11442780, guid: b63d55b48435c9047a878d0fd77c652e, type: 2}
-  spriteCollectionKey: 1062250012
+  spriteCollectionKey: 408436663
   width: 15
   height: 8
-  partitionSizeX: 32
-  partitionSizeY: 32
+  partitionSizeX: 15
+  partitionSizeY: 8
   layers:
   - hash: 1892887448
     spriteChannel:
@@ -258,9 +62,9 @@ MonoBehaviour:
     height: 8
     numColumns: 1
     numRows: 1
-    divX: 32
-    divY: 32
-    gameObject: {fileID: 109952}
+    divX: 15
+    divY: 8
+    gameObject: {fileID: 0}
   - hash: 1166427102
     spriteChannel:
       chunks:
@@ -274,9 +78,9 @@ MonoBehaviour:
     height: 8
     numColumns: 1
     numRows: 1
-    divX: 32
-    divY: 32
-    gameObject: {fileID: 101052}
+    divX: 15
+    divY: 8
+    gameObject: {fileID: 0}
   - hash: 2020588900
     spriteChannel:
       chunks:
@@ -290,9 +94,9 @@ MonoBehaviour:
     height: 8
     numColumns: 1
     numRows: 1
-    divX: 32
-    divY: 32
-    gameObject: {fileID: 149696}
+    divX: 15
+    divY: 8
+    gameObject: {fileID: 0}
   - hash: 1003156500
     spriteChannel:
       chunks:
@@ -306,9 +110,9 @@ MonoBehaviour:
     height: 8
     numColumns: 1
     numRows: 1
-    divX: 32
-    divY: 32
-    gameObject: {fileID: 164628}
+    divX: 15
+    divY: 8
+    gameObject: {fileID: 0}
   - hash: 748115119
     spriteChannel:
       chunks:
@@ -322,16 +126,16 @@ MonoBehaviour:
     height: 8
     numColumns: 1
     numRows: 1
-    divX: 32
-    divY: 32
-    gameObject: {fileID: 146992}
+    divX: 15
+    divY: 8
+    gameObject: {fileID: 0}
   colorChannel:
     clearColor: {r: 1, g: 1, b: 1, a: 1}
     chunks: []
     numColumns: 1
     numRows: 1
-    divX: 32
-    divY: 32
+    divX: 15
+    divY: 8
   prefabsRoot: {fileID: 0}
   tilePrefabsList: []
   _inEditMode: 0
@@ -345,5 +149,5 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 187628}
+  m_RootGameObject: {fileID: 100752}
   m_IsPrefabParent: 1
