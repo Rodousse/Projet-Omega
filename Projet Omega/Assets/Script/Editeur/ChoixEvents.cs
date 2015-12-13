@@ -19,31 +19,38 @@ public class ChoixEvents : MonoBehaviour {
 		InvokeRepeating("UpdateAlpha", 0, Time.deltaTime);
 	}
 	
-	public void Begin()
+	public void Begin(bool Background)
 	{
-		Fade = true;
-
-		Palette.Shift();
-        Editeur.setTile(gameObject.name);
-    }
+		if (Background)
+			GameObject.Find("Background").GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Backgrounds/" + GetComponent<RawImage>().name);
+		else
+		{
+			Fade = true;
+			Palette.Shift();
+			Editeur.setTile(gameObject.name);
+		}
+			
+	}
 
 	public void Move()
 	{
 		Editeur.MovePreview();
 	}
 
-	public void End()
+	public void End(bool Background)
 	{
-		Fade = false;
-		
-		Editeur.Placer();
+		if (!Background)
+		{
+			Editeur.Placer();
+			Fade = false;
+		}
 	}
 
 	void UpdateAlpha()
 	{
 		if (Fade && Image.color.a > 0)
-			Image.color = new Color(1, 1, 1, Image.color.a - 0.1f);
+			Image.color = new Color(1, 1, 1, Image.color.a - 0.2f);
 		else if (!Fade && Image.color.a < 1)
-			Image.color = new Color(1, 1, 1, Image.color.a + 0.1f);
+			Image.color = new Color(1, 1, 1, Image.color.a + 0.2f);
 	}
 }

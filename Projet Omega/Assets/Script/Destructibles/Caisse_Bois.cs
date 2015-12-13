@@ -2,13 +2,11 @@
 using System.Collections;
 
 public class Caisse_Bois : MonoBehaviour {
-
-	Move scriptPlayer;
+	
 	tk2dUIItem UI_Component;
 
 	void Start()
 	{
-		scriptPlayer = GameObject.Find("Monkey").GetComponent<Move>();
 		UI_Component = gameObject.AddComponent<tk2dUIItem>();
 
 		// Ajout d'un listener

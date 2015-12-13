@@ -531,7 +531,7 @@ public class tk2dTileMap : MonoBehaviour, tk2dRuntime.ISpriteCollectionForceBuil
 		}
 	}
 	
-#if UNITY_EDITOR
+
 	public void BeginEditMode()
 	{
 		if (layers == null) {
@@ -591,7 +591,6 @@ public class tk2dTileMap : MonoBehaviour, tk2dRuntime.ISpriteCollectionForceBuil
 		
 		layer.OptimizeIncremental();
 	}
-#endif
 	
 	public void TouchMesh(Mesh mesh)
 	{
