@@ -23,8 +23,12 @@ public class Move : MonoBehaviour {
 	bool jump;
 	bool isFacingRight;
 	bool willActivateInteractible;
+    bool recept = false;
+    //TODO -----------------------------------------------------------------------------------------
+    //Regler le moonwalk shake
 
-	int sens;
+
+    int sens;
 	float currentSpeed;
 
 	Vector3 destination;
@@ -74,7 +78,7 @@ public class Move : MonoBehaviour {
 	{
 		UpdateSpeed();
 		UpdateCheckers();
-
+        reception();
 		if (jump) // Si on veux faire sauter le personnage
 		{
 			if (isGrounded) // et qu'il est sur le sol
@@ -94,6 +98,7 @@ public class Move : MonoBehaviour {
 		}
 		else
 		{
+            //UpdateFacing();
 			if (isGrounded) // Conditions préalables pour avancer
 			{
 				isJumping = false;
@@ -140,12 +145,18 @@ public class Move : MonoBehaviour {
 			willActivateInteractible = false;
 			if (isFacingRight)
 			{
-				wallCheckR.GetComponent<Detector>().target.GetComponent<Caisse_Bois>().Activate();
+                if (wallCheckR.GetComponent<Detector>().target.GetComponent<Caisse_Bois>())
+                    wallCheckR.GetComponent<Detector>().target.GetComponent<Caisse_Bois>().Activate();
+                if (wallCheckR.GetComponent<Detector>().target.GetComponent<Caisse_Amovible>())
+                    wallCheckR.GetComponent<Detector>().target.GetComponent<Caisse_Amovible>().Activate(sens);
             }
 			else
 			{
-				wallCheckL.GetComponent<Detector>().target.GetComponent<Caisse_Bois>().Activate();
-			}
+                if (wallCheckL.GetComponent<Detector>().target.GetComponent<Caisse_Bois>())
+                    wallCheckL.GetComponent<Detector>().target.GetComponent<Caisse_Bois>().Activate();
+                if (wallCheckL.GetComponent<Detector>().target.GetComponent<Caisse_Amovible>())
+                    wallCheckL.GetComponent<Detector>().target.GetComponent<Caisse_Amovible>().Activate(sens);
+            }
 		}
 
 		//On la reinitialise pour poursuivre 
@@ -211,4 +222,29 @@ public class Move : MonoBehaviour {
 
 		return INPUT;
 	}
+
+    public void Jump()
+    {
+
+        jump = true;
+        willJump = true;
+        isJumping = true;
+        recept = true;
+        Vector2 velocity = new Vector2(Vector2.right.x * rb2d.velocity.x, Vector2.up.y);
+        rb2d.AddForce(velocity, ForceMode2D.Impulse);
+        animator.SetTrigger("Jump"); //faire un saut vers l'avant
+
+    }
+
+    void reception()
+    {
+
+        if (!groundCheck)
+            recept = true;
+        if (groundCheck && recept && !isJumping)
+        {
+            finalDestination = transform.position;
+            recept = false;
+        }
+    }
 }

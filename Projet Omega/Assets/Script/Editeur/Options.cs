@@ -110,6 +110,7 @@ public class Options : MonoBehaviour {
 		yield return new WaitForEndOfFrame();
 
 		// Take screenshot
+		//
 
 # if UNITY_ANDROID
 	Application.CaptureScreenshot(FileName + ".png");
@@ -124,7 +125,7 @@ public class Options : MonoBehaviour {
 		GameObject.Find("Camera").GetComponent<BlurOptimized>().enabled = true;
 
 		// On attend que l'image soit finie d'etre ecrite
-		yield return new WaitForSeconds(0.5f);
+		yield return new WaitForSeconds(1);
 
 		GetComponentInChildren<RemplirListeMaps>().RefreshList();
 	}
