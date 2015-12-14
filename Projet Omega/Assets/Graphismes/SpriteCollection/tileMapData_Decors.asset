@@ -22,19 +22,21 @@ MonoBehaviour:
   tilePrefabs:
   - {fileID: 0}
   - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 117842, guid: 25fca16da2abd9f4fa7576881c04e682, type: 2}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 169594, guid: c0bfb955587bd1c429750163c551875f, type: 2}
   - {fileID: 0}
   - {fileID: 109520, guid: 5c60ebb9859b3f449ab1d1b358dfb659, type: 2}
-  - {fileID: 0}
+  - {fileID: 190924, guid: 67a98812e19e03a4c8f0db01510e6577, type: 2}
   - {fileID: 196688, guid: 8388630a8b40bec448d0d53559b8d01d, type: 2}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 174104, guid: 977581888564deb4b852ad5ca4b548d3, type: 2}
+  - {fileID: 126612, guid: cc0190ac99bb95b4681e5cdef607690e, type: 2}
+  - {fileID: 154784, guid: 6201865a0588d8c47b380e25320e2728, type: 2}
+  - {fileID: 190724, guid: a1a2c99d9b7b21148bdb0d3e2fbc5754, type: 2}
   - {fileID: 187060, guid: b6d676fad7a322d459f47d7f9c2f5a74, type: 2}
+  - {fileID: 167982, guid: bb495f6df4e41194eb1e3570b1142f91, type: 2}
+  - {fileID: 186352, guid: 08850487fd46fcf43a9f6552c39c9af3, type: 2}
   tileInfo:
   - stringVal: 
     intVal: 0
@@ -76,6 +78,14 @@ MonoBehaviour:
     intVal: 0
     floatVal: 0
     enablePrefabOffset: 1
+  - stringVal: 
+    intVal: 0
+    floatVal: 0
+    enablePrefabOffset: 0
+  - stringVal: 
+    intVal: 0
+    floatVal: 0
+    enablePrefabOffset: 0
   - stringVal: 
     intVal: 0
     floatVal: 0

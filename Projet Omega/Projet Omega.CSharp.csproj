@@ -223,11 +223,9 @@
     <Compile Include="Assets\Custom Assets\Standard Assets\Effects\ImageEffects\Scripts\Twirl.cs" />
     <Compile Include="Assets\Custom Assets\Standard Assets\Effects\ImageEffects\Scripts\VignetteAndChromaticAberration.cs" />
     <Compile Include="Assets\Custom Assets\Standard Assets\Effects\ImageEffects\Scripts\Vortex.cs" />
-    <Compile Include="Assets\Script\Destructibles\Caisse_Amovible.cs" />
     <Compile Include="Assets\Script\Destructibles\Caisse_Bois.cs" />
     <Compile Include="Assets\Script\Editeur\ChoixEvents.cs" />
     <Compile Include="Assets\Script\Editeur\Controleur.cs" />
-    <Compile Include="Assets\Script\Editeur\Essayer_Button.cs" />
     <Compile Include="Assets\Script\Editeur\Map.cs" />
     <Compile Include="Assets\Script\Editeur\Options.cs" />
     <Compile Include="Assets\Script\Editeur\RemplirListeMaps.cs" />
