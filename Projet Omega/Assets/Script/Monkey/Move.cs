@@ -5,7 +5,6 @@ public class Move : MonoBehaviour {
 	
 	public float maxSpeed;
 	public LayerMask LayersConcerne;
-    public bool banane = false;
 
 	Collider2D groundCheck;
 	Collider2D wallCheckR;

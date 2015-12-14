@@ -200,23 +200,19 @@
      <Compile Include="Assets\Custom Assets\Standard Assets\Effects\ImageEffects\Scripts\Twirl.cs" />
      <Compile Include="Assets\Custom Assets\Standard Assets\Effects\ImageEffects\Scripts\VignetteAndChromaticAberration.cs" />
      <Compile Include="Assets\Custom Assets\Standard Assets\Effects\ImageEffects\Scripts\Vortex.cs" />
+     <Compile Include="Assets\Script\Destructibles\Caisse_Amovible.cs" />
+     <Compile Include="Assets\Script\Destructibles\Caisse_Bois.cs" />
      <Compile Include="Assets\Script\Editeur\ChoixEvents.cs" />
      <Compile Include="Assets\Script\Editeur\Controleur.cs" />
      <Compile Include="Assets\Script\Editeur\Map.cs" />
      <Compile Include="Assets\Script\Editeur\Options.cs" />
      <Compile Include="Assets\Script\Editeur\RemplirListeMaps.cs" />
      <Compile Include="Assets\Script\Editeur\UI_Palette.cs" />
-     <Compile Include="Assets\Script\Item\Bruler.cs" />
-     <Compile Include="Assets\Script\Item\Caisse_Amovible.cs" />
-     <Compile Include="Assets\Script\Item\Caisse_Bois.cs" />
-     <Compile Include="Assets\Script\Item\Ramasser.cs" />
      <Compile Include="Assets\Script\Managers\ClickManager.cs" />
      <Compile Include="Assets\Script\Managers\FileManager.cs" />
      <Compile Include="Assets\Script\Managers\PlatformSpecific.cs" />
      <Compile Include="Assets\Script\Monkey\Detector.cs" />
      <Compile Include="Assets\Script\Monkey\Move.cs" />
-     <Compile Include="Assets\Script\UI\EndLevel.cs" />
-     <Compile Include="Assets\Script\UI\Play.cs" />
      <None Include="Assets\Custom Assets\Standard Assets\Effects\GlassRefraction\Shaders\GlassStainedBumpDistort.shader" />
      <None Include="Assets\Custom Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BlendOneOne.shader" />
      <None Include="Assets\Custom Assets\Standard Assets\Effects\ImageEffects\Shaders\NoiseEffectShaderRGB.shader" />
@@ -311,11 +307,17 @@
      <None Include="Assets\Custom Assets\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\FXAAPreset2.shader" />
      <None Include="Assets\Custom Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BlurAndFlares.shader" />
      <None Include="Assets\Custom Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BlendForBloom.shader" />
+ <Reference Include="UnityEngine.Advertisements">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Advertisements/UnityEngine.Advertisements.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Networking">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Analytics">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
  </Reference>
  <Reference Include="Mono.Cecil">
  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/Mono.Cecil.dll</HintPath>

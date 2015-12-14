@@ -27,6 +27,18 @@ public class Options : MonoBehaviour {
 		InvokeRepeating("UpdateBlur", 0, Time.deltaTime);
 	}
 
+	public void Rentrer()
+	{
+		Blur = State = false;
+
+		child.SetActive(State);
+		anim.SetBool("State", State);
+
+		State_Explorer = false;
+		explorer_anim.SetBool("State", State_Explorer);
+		Cancel_Export();
+	}
+
 	public void Switch()
 	{
 		Blur = State = !State;

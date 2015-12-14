@@ -41,25 +41,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textures: []
   textureRefs: []
-  spriteSheets:
-  - texture: {fileID: 0}
-    tilesX: 0
-    tilesY: 0
-    numTiles: 0
-    anchor: 4
-    pad: 0
-    scale: {x: 1, y: 1, z: 1}
-    additive: 0
-    active: 1
-    tileWidth: 0
-    tileHeight: 0
-    tileMarginX: 0
-    tileMarginY: 0
-    tileSpacingX: 0
-    tileSpacingY: 0
-    splitMethod: 0
-    version: 1
-    colliderType: 0
+  spriteSheets: []
   fonts: []
   defaults:
     additive: 0
@@ -82,7 +64,7 @@ MonoBehaviour:
   atlasWidth: 1024
   atlasHeight: 1024
   forceSquareAtlas: 0
-  atlasWastage: 10.1285934
+  atlasWastage: 13.1784439
   allowMultipleAtlases: 0
   removeDuplicates: 1
   textureParams:
@@ -708,88 +690,6 @@ MonoBehaviour:
     regionH: 0
     regionId: 0
     colliderType: 2
-    colliderData: []
-    boxColliderMin: {x: 0, y: 0}
-    boxColliderMax: {x: 0, y: 0}
-    polyColliderIslands: []
-    polyColliderCap: 1
-    colliderConvex: 0
-    colliderSmoothSphereCollisions: 0
-    colliderColor: 0
-    attachPoints: []
-  - name: Sortie
-    disableTrimming: 0
-    additive: 0
-    scale: {x: 1, y: 1, z: 1}
-    texture: {fileID: 2800000, guid: 378d9c0bab5714f4b92f711b6756fccf, type: 3}
-    materialId: 0
-    anchor: 4
-    anchorX: 0
-    anchorY: 0
-    overrideMesh: {fileID: 0}
-    doubleSidedSprite: 0
-    customSpriteGeometry: 0
-    geometryIslands: []
-    dice: 0
-    diceUnitX: 64
-    diceUnitY: 64
-    diceFilter: 0
-    pad: 0
-    extraPadding: 0
-    source: 0
-    fromSpriteSheet: 0
-    hasSpriteSheetId: 0
-    spriteSheetId: 0
-    spriteSheetX: 0
-    spriteSheetY: 0
-    extractRegion: 0
-    regionX: 0
-    regionY: 0
-    regionW: 0
-    regionH: 0
-    regionId: 0
-    colliderType: 0
-    colliderData: []
-    boxColliderMin: {x: 0, y: 0}
-    boxColliderMax: {x: 0, y: 0}
-    polyColliderIslands: []
-    polyColliderCap: 1
-    colliderConvex: 0
-    colliderSmoothSphereCollisions: 0
-    colliderColor: 0
-    attachPoints: []
-  - name: Start
-    disableTrimming: 0
-    additive: 0
-    scale: {x: 1, y: 1, z: 1}
-    texture: {fileID: 2800000, guid: f35f760651540164a9564acf841a5a61, type: 3}
-    materialId: 0
-    anchor: 4
-    anchorX: 0
-    anchorY: 0
-    overrideMesh: {fileID: 0}
-    doubleSidedSprite: 0
-    customSpriteGeometry: 0
-    geometryIslands: []
-    dice: 0
-    diceUnitX: 64
-    diceUnitY: 64
-    diceFilter: 0
-    pad: 0
-    extraPadding: 0
-    source: 0
-    fromSpriteSheet: 0
-    hasSpriteSheetId: 0
-    spriteSheetId: 0
-    spriteSheetX: 0
-    spriteSheetY: 0
-    extractRegion: 0
-    regionX: 0
-    regionY: 0
-    regionW: 0
-    regionH: 0
-    regionId: 0
-    colliderType: 0
     colliderData: []
     boxColliderMin: {x: 0, y: 0}
     boxColliderMax: {x: 0, y: 0}

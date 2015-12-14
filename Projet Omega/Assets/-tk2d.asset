@@ -34,8 +34,6 @@ MonoBehaviour:
     - Sans titre-4
     - Sans titre-2
     - BoxRoulette
-    - Sortie
-    - Start
     spriteTextureGUIDs:
     - 7e664ed3ab7449946b3d0f109487c761
     - 41c10aa7e711e5544b3e5de300e54b7a
@@ -52,8 +50,6 @@ MonoBehaviour:
     - 7ca88648d5152e74c981e8be0418cded
     - 52ff280e679bc804cbfc72c79eb214a8
     - 87040267d33959a48912720affa9c94c
-    - 378d9c0bab5714f4b92f711b6756fccf
-    - f35f760651540164a9564acf841a5a61
     spriteTextureTimeStamps:
     - 1450020959.02468
     - 1450020959.02868
@@ -69,9 +65,7 @@ MonoBehaviour:
     - 1450020959.01968
     - 1450020959.01868
     - 1450020959.00868
-    - 1450044296.90797
-    - 1450052670
-    - 1450052352
+    - 1449792478
     managedSpriteCollection: 0
     loadable: 0
     assetName: 
