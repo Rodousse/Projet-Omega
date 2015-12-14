@@ -57,6 +57,9 @@ TagManager:
   - name: Destructible
     uniqueID: 1621241895
     locked: 0
+  - name: PremierPlan
+    uniqueID: 854206805
+    locked: 0
   - name: Skeleton
     uniqueID: 1823863277
     locked: 0

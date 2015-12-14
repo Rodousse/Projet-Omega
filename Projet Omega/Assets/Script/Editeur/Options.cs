@@ -27,6 +27,18 @@ public class Options : MonoBehaviour {
 		InvokeRepeating("UpdateBlur", 0, Time.deltaTime);
 	}
 
+	public void Rentrer()
+	{
+		Blur = State = false;
+
+		child.SetActive(State);
+		anim.SetBool("State", State);
+
+		State_Explorer = false;
+		explorer_anim.SetBool("State", State_Explorer);
+		Cancel_Export();
+	}
+
 	public void Switch()
 	{
 		Blur = State = !State;
@@ -125,7 +137,7 @@ public class Options : MonoBehaviour {
 		GameObject.Find("Camera").GetComponent<BlurOptimized>().enabled = true;
 
 		// On attend que l'image soit finie d'etre ecrite
-		yield return new WaitForSeconds(1);
+		yield return new WaitForSeconds(0.5f);
 
 		GetComponentInChildren<RemplirListeMaps>().RefreshList();
 	}

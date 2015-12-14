@@ -27,6 +27,7 @@ public class ChoixEvents : MonoBehaviour {
 		{
 			Fade = true;
 			Palette.Shift();
+			Editeur.MovePreview();
 			Editeur.setTile(gameObject.name);
 		}
 			
