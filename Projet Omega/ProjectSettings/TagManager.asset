@@ -8,6 +8,7 @@ TagManager:
   - Wall
   - Ground
   - Destructible
+  - Audio
   layers:
   - Default
   - TransparentFX

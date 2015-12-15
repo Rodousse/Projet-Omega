@@ -29,6 +29,8 @@ public class Caisse_Amovible : MonoBehaviour {
         if (Mathf.Abs(transform.position.x - destination.x) < 0.5f)
         {
             transform.position = new Vector3(destination.x, transform.position.y, transform.position.z);
+            rb2d.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezeRotation;
+
         }
 
     }

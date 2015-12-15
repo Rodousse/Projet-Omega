@@ -277,10 +277,10 @@
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/Editor/UnityEditor.Networking.dll</HintPath>
  </Reference>
  <Reference Include="tk2dExternal">
- <HintPath>C:/Users/Robin/Desktop/Projet-Omega2/Projet Omega/Assets/Custom Assets/2D Toolkits/tk2d/Editor/tk2dExternal.dll</HintPath>
+ <HintPath>C:/Users/Robin/Desktop/Projet-Omega/Projet Omega/Assets/Custom Assets/2D Toolkits/tk2d/Editor/tk2dExternal.dll</HintPath>
  </Reference>
  <Reference Include="tk2dSkin">
- <HintPath>C:/Users/Robin/Desktop/Projet-Omega2/Projet Omega/Assets/Custom Assets/2D Toolkits/tk2d/Editor/tk2dSkin.dll</HintPath>
+ <HintPath>C:/Users/Robin/Desktop/Projet-Omega/Projet Omega/Assets/Custom Assets/2D Toolkits/tk2d/Editor/tk2dSkin.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.Graphs">
  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEditor.Graphs.dll</HintPath>

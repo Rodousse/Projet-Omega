@@ -23,3 +23,17 @@ EditorBuildSettings:
     path: Assets/Scene/test.unity
   - enabled: 0
     path: Assets/Scene/test2.unity
+  - enabled: 1
+    path: Assets/Scene/level0.unity
+  - enabled: 1
+    path: Assets/Scene/level4.unity
+  - enabled: 1
+    path: Assets/Scene/level5.unity
+  - enabled: 1
+    path: Assets/Scene/Load.unity
+  - enabled: 1
+    path: Assets/Scene/level6.unity
+  - enabled: 1
+    path: Assets/Scene/level7.unity
+  - enabled: 1
+    path: Assets/Scene/level8.unity

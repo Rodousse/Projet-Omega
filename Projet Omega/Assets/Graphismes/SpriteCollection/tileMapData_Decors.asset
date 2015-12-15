@@ -37,6 +37,7 @@ MonoBehaviour:
   - {fileID: 187060, guid: b6d676fad7a322d459f47d7f9c2f5a74, type: 2}
   - {fileID: 167982, guid: bb495f6df4e41194eb1e3570b1142f91, type: 2}
   - {fileID: 186352, guid: 08850487fd46fcf43a9f6552c39c9af3, type: 2}
+  - {fileID: 167982, guid: bb495f6df4e41194eb1e3570b1142f91, type: 2}
   tileInfo:
   - stringVal: 
     intVal: 0
@@ -78,6 +79,10 @@ MonoBehaviour:
     intVal: 0
     floatVal: 0
     enablePrefabOffset: 1
+  - stringVal: 
+    intVal: 0
+    floatVal: 0
+    enablePrefabOffset: 0
   - stringVal: 
     intVal: 0
     floatVal: 0

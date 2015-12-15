@@ -337,6 +337,7 @@ GameObject:
   - 50: {fileID: 5019538}
   - 61: {fileID: 6108688}
   - 114: {fileID: 11460886}
+  - 82: {fileID: 8218320}
   m_Layer: 0
   m_Name: Monkey
   m_TagString: Player
@@ -1898,6 +1899,76 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 4.59138393}
   serializedVersion: 2
   m_Size: {x: 2.5, y: 7.08276749}
+--- !u!82 &8218320
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 138954}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!95 &9555376
 Animator:
   serializedVersion: 3
@@ -3135,6 +3206,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 583983e91a2e5564e94b19aa368bacbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bruits:
+  - {fileID: 8300000, guid: cae974c7dde99ba4592172ed81236425, type: 3}
+  - {fileID: 8300000, guid: ec7ce3cb6d9558c458510f3868f4e971, type: 3}
+  Source: {fileID: 8218320}
   maxSpeed: 10
   LayersConcerne:
     serializedVersion: 2

@@ -2,8 +2,9 @@
 using System.Collections;
 
 public class Move : MonoBehaviour {
-	
-	public float maxSpeed;
+    public AudioClip[] bruits;
+    public AudioSource Source;
+    public float maxSpeed;
 	public LayerMask LayersConcerne;
     public bool banane = false;
 
@@ -51,7 +52,9 @@ public class Move : MonoBehaviour {
 
 	public void SetfinalDestination(bool isDestructible = false)
 	{
-		willActivateInteractible = false;
+        Source.clip = bruits[0];
+        Source.Play();
+        willActivateInteractible = false;
 
 		if (isGrounded)
 		{
@@ -74,6 +77,7 @@ public class Move : MonoBehaviour {
 
 	void FixedUpdate()
 	{
+
 		UpdateSpeed();
 		UpdateCheckers();
         reception();
@@ -105,13 +109,13 @@ public class Move : MonoBehaviour {
 				{
 					if (isWalled)  // si on rencontre un mur
 					{
-						if (canJump) // et si on veut sauter
-						{
-							if (destination.x > transform.position.x + 1.25f || destination.x < transform.position.x - 1.25f)
-								willJump = true; // Si la destination est au prochain "cube" de distance On fait sauter le mur
-						}
-						else // si il y a un mur on arrete d'avancer
-							finalDestination = transform.position;
+                        if (canJump) // et si on veut sauter
+                        {
+                            if (destination.x > transform.position.x + 1.25f || destination.x < transform.position.x - 1.25f)
+                                willJump = true; // Si la destination est au prochain "cube" de distance On fait sauter le mur
+                        }
+                        else // si il y a un mur on arrete d'avancer
+                            finalDestination = new Vector3(RoundAbout(transform.position.x, 2.5f), RoundAbout(transform.position.y, 2.5f), finalDestination.z) ;
 
 						// et on recentre sa position
 						destination.x = RoundAbout(transform.position.x, 2.5f);
@@ -127,7 +131,10 @@ public class Move : MonoBehaviour {
 						transform.position = new Vector3(destination.x, transform.position.y, transform.position.z);
 						if (willJump) // Sauter sur la plateforme
 							jump = true;
-					}
+                        if (!willActivateInteractible)
+                            if (Source.clip == bruits[0])
+                                Source.Stop();// Source.Stop();
+                    }
 				}
 			}
 			else if (!isJumping) // Fall
@@ -138,7 +145,7 @@ public class Move : MonoBehaviour {
 
 		if (transform.position.x != destination.x) // Si on a changé la destinaion poour aller sur le prochain cube,
 			destination = finalDestination;
-		else if(willActivateInteractible) // Sinon si on doit activer le cube et que l'on est à la finaldestination
+		if(willActivateInteractible && transform.position.x == finalDestination.x) // Sinon si on doit activer le cube et que l'on est à la finaldestination
 		{
 			willActivateInteractible = false;
 
@@ -158,7 +165,10 @@ public class Move : MonoBehaviour {
                 if (wallCheckL.GetComponent<Detector>().target.GetComponent<Caisse_Amovible>())
                     wallCheckL.GetComponent<Detector>().target.GetComponent<Caisse_Amovible>().Activate(sens);
             }
-		}
+            Source.Stop();
+            Source.clip = bruits[1];
+            Source.Play();
+        }
 
 		//On la reinitialise pour poursuivre 
 	}

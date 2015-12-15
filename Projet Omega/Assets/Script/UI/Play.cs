@@ -5,6 +5,7 @@ public class Play : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+        Destroy(GameObject.FindGameObjectWithTag("Audio"));
 	
 	}
 	
@@ -14,7 +15,8 @@ public class Play : MonoBehaviour {
 	}
     public void start()
     {
-        Application.LoadLevel("level1");
+        PlayerPrefs.SetInt("Save", 0);
+        Application.LoadLevel("Load");
     }
     public void editeur()
     {
