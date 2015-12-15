@@ -25,9 +25,6 @@ public class Move : MonoBehaviour {
 	bool isFacingRight;
 	bool willActivateInteractible;
     bool recept = false;
-    //TODO -----------------------------------------------------------------------------------------
-    //Regler le moonwalk shake
-
 
     int sens;
 	float currentSpeed;
@@ -144,6 +141,9 @@ public class Move : MonoBehaviour {
 		else if(willActivateInteractible) // Sinon si on doit activer le cube et que l'on est à la finaldestination
 		{
 			willActivateInteractible = false;
+
+			animator.SetTrigger("Punch");
+
 			if (isFacingRight)
 			{
                 if (wallCheckR.GetComponent<Detector>().target.GetComponent<Caisse_Bois>())

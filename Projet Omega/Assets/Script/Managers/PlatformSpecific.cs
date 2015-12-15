@@ -1,10 +1,29 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PlatformSpecific : MonoBehaviour {
-	
-	void Start () {
+//package com.company.product;
+
+//import com.unity3d.player.UnityPlayerActivity;
+
+//import android.os.Bundle;
+//import android.util.Log;
+
+public class PlatformSpecific : MonoBehaviour
+{
+	void Start()
+	{
 		//Empeche l'écran de s'éteindre
 		Screen.sleepTimeout = SleepTimeout.NeverSleep;
+	}
+
+	public void Update()
+	{
+		if (Input.GetKeyDown(KeyCode.Escape))
+			Application.LoadLevel("Menu");
+	}
+
+	public void RetourMenu()
+	{
+		Application.LoadLevel("Menu");
 	}
 }

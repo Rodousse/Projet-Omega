@@ -94,8 +94,8 @@ PlayerSettings:
   virtualRealitySupported: 0
   productGUID: e35cace070faa2d4b8ae2c9e894fc041
   AndroidBundleVersionCode: 1
-  AndroidMinSdkVersion: 21
-  AndroidPreferredInstallLocation: 1
+  AndroidMinSdkVersion: 22
+  AndroidPreferredInstallLocation: 0
   aotOptions: 
   apiCompatibilityLevel: 1
   stripEngineCode: 1
@@ -103,7 +103,7 @@ PlayerSettings:
   iPhoneScriptCallOptimization: 0
   iPhoneBuildNumber: 0
   ForceInternetPermission: 0
-  ForceSDCardPermission: 0
+  ForceSDCardPermission: 1
   CreateWallpaper: 0
   APKExpansionFiles: 0
   preloadShaders: 1
@@ -151,7 +151,7 @@ PlayerSettings:
   androidSplashScreen: {fileID: 0}
   AndroidKeystoreName: 
   AndroidKeyaliasName: 
-  AndroidTVCompatibility: 1
+  AndroidTVCompatibility: 0
   AndroidIsGame: 1
   androidEnableBanner: 0
   m_AndroidBanners:

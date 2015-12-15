@@ -15,6 +15,13 @@ public class Caisse_Bois : MonoBehaviour {
 
 	public void Activate()
 	{
-		Destroy(gameObject);
+		Destroy(GetComponent<SpriteRenderer>());
+		Destroy(GetComponent<BoxCollider2D>());
+		Destroy(GetComponent<Rigidbody2D>());
+		Destroy(GetComponent<tk2dUIItem>());
+
+		transform.GetChild(0).gameObject.SetActive(true);
+
+		//Destroy(gameObject);
 	}
 }

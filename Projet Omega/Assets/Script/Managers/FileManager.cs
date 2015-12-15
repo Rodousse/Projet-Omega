@@ -11,7 +11,7 @@ public static class FileManager {
 	
 	static public void Exporter(string MapName)
 	{
-		tk2dTileMap TileMap = GameObject.Find("TileMap").GetComponent<tk2dTileMap>();
+		tk2dTileMap TileMap = GameObject.FindObjectOfType<tk2dTileMap>(); ;
 
 		FileInfo file = new FileInfo(Application.persistentDataPath + '/' + MapName + ".omg");
 
@@ -42,7 +42,7 @@ public static class FileManager {
 
 	static public void Importer(string Filename)
 	{
-		tk2dTileMap TileMap = GameObject.Find("TileMap").GetComponent<tk2dTileMap>();
+		tk2dTileMap TileMap = GameObject.FindObjectOfType<tk2dTileMap>(); ;
 
 		FileInfo file = new FileInfo(Application.persistentDataPath + '/' + Filename + ".omg");
 

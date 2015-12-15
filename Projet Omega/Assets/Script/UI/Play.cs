@@ -14,10 +14,10 @@ public class Play : MonoBehaviour {
 	}
     public void start()
     {
-        Application.LoadLevel(0);
+        Application.LoadLevel("level1");
     }
     public void editeur()
     {
-        Application.LoadLevel(1);
+        Application.LoadLevel("Editeur");
     }
 }

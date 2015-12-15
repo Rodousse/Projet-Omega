@@ -2,8 +2,7 @@
 using System.Collections;
 
 public class Caisse_Amovible : MonoBehaviour {
-
-    Move scriptPlayer;
+	
     tk2dUIItem UI_Component;
     Rigidbody2D rb2d;
     Vector2 destination;
@@ -14,7 +13,6 @@ public class Caisse_Amovible : MonoBehaviour {
     {
         destination = new Vector2(transform.position.x, transform.position.y);
         rb2d = GetComponent<Rigidbody2D>();
-        scriptPlayer = GameObject.Find("Monkey").GetComponent<Move>();
         UI_Component = gameObject.AddComponent<tk2dUIItem>();
 
         // Ajout d'un listener

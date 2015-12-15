@@ -223,6 +223,8 @@
     <Compile Include="Assets\Custom Assets\Standard Assets\Effects\ImageEffects\Scripts\Twirl.cs" />
     <Compile Include="Assets\Custom Assets\Standard Assets\Effects\ImageEffects\Scripts\VignetteAndChromaticAberration.cs" />
     <Compile Include="Assets\Custom Assets\Standard Assets\Effects\ImageEffects\Scripts\Vortex.cs" />
+    <Compile Include="Assets\Script\Accueil\NomSave.cs" />
+    <Compile Include="Assets\Script\Accueil\Reset.cs" />
     <Compile Include="Assets\Script\Editeur\ChoixEvents.cs" />
     <Compile Include="Assets\Script\Editeur\Controleur.cs" />
     <Compile Include="Assets\Script\Editeur\Essayer_Button.cs" />
@@ -234,6 +236,7 @@
     <Compile Include="Assets\Script\Item\Bruler.cs" />
     <Compile Include="Assets\Script\Item\Caisse_Amovible.cs" />
     <Compile Include="Assets\Script\Item\Caisse_Bois.cs" />
+    <Compile Include="Assets\Script\Item\FinalDestroy.cs" />
     <Compile Include="Assets\Script\Item\Ramasser.cs" />
     <Compile Include="Assets\Script\Managers\ClickManager.cs" />
     <Compile Include="Assets\Script\Managers\FileManager.cs" />
@@ -242,6 +245,7 @@
     <Compile Include="Assets\Script\Monkey\Move.cs" />
     <Compile Include="Assets\Script\UI\EndLevel.cs" />
     <Compile Include="Assets\Script\UI\Play.cs" />
+    <Compile Include="Assets\Script\UI\RestartButton.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Custom Assets\2D Toolkits\tk2d\Editor\EditorUtility.shader" />

@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using System.Collections;
-using UnityEditor;
 
 public class ClickManager : Singleton<ClickManager> {
 
@@ -20,7 +19,7 @@ public class ClickManager : Singleton<ClickManager> {
 
 	void Start ()
 	{
-		scriptPlayer = GameObject.Find("Monkey").GetComponent<Move>();
+		scriptPlayer = FindObjectOfType<Move>();
 		UI_Component = gameObject.AddComponent<tk2dUIItem>();
 
 		// Ajout d'un listener
@@ -32,65 +31,43 @@ public class ClickManager : Singleton<ClickManager> {
         hold = false;
         //#if UNITY_ANDROID
         if (Input.touchCount > 0)
-
         {
-
             Touch touch = Input.touches[0];
 
-
-
             switch (touch.phase)
-
             {
-
                 case TouchPhase.Began:
-
                     startPos = touch.position;
-
                     break;
-
-
-
                 case TouchPhase.Ended:
-
                     float swipeDistVertical = (new Vector3(0, touch.position.y, 0) - new Vector3(0, startPos.y, 0)).magnitude;
 
                     if (swipeDistVertical > minSwipeDistY)
-
                     {
-
                         float swipeValue = Mathf.Sign(touch.position.y - startPos.y);
 
-                        if (swipeValue > 0)//up swipe
-                        {
-                            scriptPlayer.Jump();
-                            hold = true;
-                            Debug.Log("Bien ouej");
-                        }
+						if (swipeValue > 0)//up swipe
+						{
+							scriptPlayer.Jump();
+							hold = true;
+							Debug.Log("Bien ouej");
+						}
 
+						//down swipe
+						//else if (swipeValue < 0);
+					}
 
-                        else if (swipeValue < 0)//down swipe
-                            ;
-
-
-                    }
-
-                    float swipeDistHorizontal = (new Vector3(touch.position.x, 0, 0) - new Vector3(startPos.x, 0, 0)).magnitude;
+					float swipeDistHorizontal = (new Vector3(touch.position.x, 0, 0) - new Vector3(startPos.x, 0, 0)).magnitude;
 
                     if (swipeDistHorizontal > minSwipeDistX)
-
                     {
+                        //float swipeValue = Mathf.Sign(touch.position.x - startPos.x);
 
-                        float swipeValue = Mathf.Sign(touch.position.x - startPos.x);
+						//right swipe
+						//if (swipeValue > 0);
 
-                        if (swipeValue > 0)//right swipe
-                            ;
-
-
-                        else if (swipeValue < 0)//left swipe
-                            ;
-
-
+						//left swipe
+						//else if (swipeValue < 0);
                     }
                     else if (!(swipeDistHorizontal > minSwipeDistX) && !(swipeDistVertical > minSwipeDistY))
                         scriptPlayer.SetfinalDestination();
@@ -101,7 +78,7 @@ public class ClickManager : Singleton<ClickManager> {
 
     void ClickOn_Background()
 	{
-        if(!hold)
+        if(!hold && scriptPlayer != null)
 		    scriptPlayer.SetfinalDestination();
     }
 

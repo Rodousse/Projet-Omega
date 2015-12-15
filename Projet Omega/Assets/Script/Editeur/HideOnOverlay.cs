@@ -4,14 +4,17 @@ using System.Collections;
 
 public class HideOnOverlay : MonoBehaviour
 {
-	RawImage Image;
+	MaskableGraphic Image;
 	bool Fade;
 	float MaxAlpha;
 
 	void Start()
 	{
 		Fade = false;
-		Image = GetComponent<RawImage>();
+
+		if ((Image = GetComponent<RawImage>()) == null)
+			Image = GetComponent<Image>();
+
 		InvokeRepeating("UpdateAlpha", 0, Time.deltaTime);
 		MaxAlpha = Image.color.a;
 	}

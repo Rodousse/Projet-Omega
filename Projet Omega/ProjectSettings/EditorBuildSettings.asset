@@ -7,8 +7,10 @@ EditorBuildSettings:
   m_Scenes:
   - enabled: 0
     path: Assets/Scene/Editor_mode.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scene/Basic.unity
+  - enabled: 1
+    path: Assets/Scene/Menu.unity
   - enabled: 1
     path: Assets/Scene/Editeur.unity
   - enabled: 1
@@ -17,9 +19,7 @@ EditorBuildSettings:
     path: Assets/Scene/level2.unity
   - enabled: 1
     path: Assets/Scene/level3.unity
-  - enabled: 1
-    path: "Assets/Scene/Menu anim\xE9.unity"
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scene/test.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scene/test2.unity

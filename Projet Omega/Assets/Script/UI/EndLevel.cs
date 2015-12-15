@@ -9,7 +9,7 @@ public class EndLevel : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        scriptPlayer = GameObject.Find("Monkey").GetComponent<Move>();
+        scriptPlayer = FindObjectOfType<Move>();
     }
 	
 	// Update is called once per frame
@@ -21,7 +21,7 @@ public class EndLevel : MonoBehaviour {
     {
         if (coll.gameObject.tag == "Player")
             if (scriptPlayer.banane)
-                Application.LoadLevel("Basic");
+                Application.LoadLevel(nextLevel);
 
     }
 }

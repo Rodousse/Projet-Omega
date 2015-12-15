@@ -11,6 +11,7 @@ public class Options : MonoBehaviour {
 	private Animator anim, explorer_anim, INPUT_NomMap_anim;
 	public GameObject Fond;
 	public BlurOptimized effect;
+	bool isScreenShot;
 	private GameObject child;
 
 	bool Blur = false;
@@ -18,7 +19,8 @@ public class Options : MonoBehaviour {
 	void Start()
 	{
 		anim = GetComponent<Animator>();
-		
+		isScreenShot = false;
+
 		child = transform.FindChild("Safety").gameObject;
 		
 		explorer_anim = transform.FindChild("Explorer").gameObject.GetComponent<Animator>();
@@ -58,7 +60,7 @@ public class Options : MonoBehaviour {
 
 	public void Effacer()
 	{
-		tk2dTileMap TileMap = GameObject.Find("TileMap").GetComponent<tk2dTileMap>();
+		tk2dTileMap TileMap = FindObjectOfType<tk2dTileMap>();
 
 		TileMap.BeginEditMode();
 
@@ -99,16 +101,19 @@ public class Options : MonoBehaviour {
 
 	void UpdateBlur()
 	{
-		if(Blur)
-			effect.enabled = true;
+		if (!isScreenShot)
+		{
+			if (Blur)
+				effect.enabled = true;
 
-		if (!Blur && effect.blurSize > 0)
-			effect.blurSize -= 0.2f;
-		else if (Blur && effect.blurSize < 4)
-			effect.blurSize += 0.2f;
+			if (!Blur && effect.blurSize > 0)
+				effect.blurSize -= 0.5f;
+			else if (Blur && effect.blurSize < 4)
+				effect.blurSize += 0.5f;
 
-		if (effect.blurSize < 0)
-			effect.enabled = false;
+			if (effect.blurSize <= 0)
+				effect.enabled = false;
+		}		
 	}
 
 	public IEnumerator ScreenShot(string FileName)
@@ -116,28 +121,28 @@ public class Options : MonoBehaviour {
 		// Wait till the last possible moment before screen rendering to hide the UI
 		yield return null;
 		GameObject.Find("Editeur").GetComponent<Canvas>().enabled = false;
-		GameObject.Find("Camera").GetComponent<BlurOptimized>().enabled = false;
+		GameObject.FindObjectOfType<BlurOptimized>().enabled = false;
+		isScreenShot = true;
 
 		// Wait for screen rendering to complete
 		yield return new WaitForEndOfFrame();
 
 		// Take screenshot
-		//
+		#if UNITY_ANDROID
+			Application.CaptureScreenshot(FileName + ".png");
+		#endif
 
-# if UNITY_ANDROID
-	Application.CaptureScreenshot(FileName + ".png");
-#endif
+		#if (UNITY_EDITOR || UNITY_STANDALONE_WIN)
+			Application.CaptureScreenshot(Application.persistentDataPath + '/' + FileName + ".png");
+		#endif
 
-#if (UNITY_EDITOR || UNITY_STANDALONE_WIN)
-	Application.CaptureScreenshot(Application.persistentDataPath + '/' + FileName + ".png");
-#endif
+		// On attend que l'image soit finie d'etre ecrite
+		yield return new WaitForSeconds(2);
 
 		// Show UI after we're done
 		GameObject.Find("Editeur").GetComponent<Canvas>().enabled = true;
 		GameObject.Find("Camera").GetComponent<BlurOptimized>().enabled = true;
-
-		// On attend que l'image soit finie d'etre ecrite
-		yield return new WaitForSeconds(0.5f);
+		isScreenShot = false;
 
 		GetComponentInChildren<RemplirListeMaps>().RefreshList();
 	}
