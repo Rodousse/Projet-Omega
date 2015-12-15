@@ -26,7 +26,12 @@ public class ClickManager : Singleton<ClickManager> {
 		UI_Component.OnUp += this.ClickOn_Background;
 	}
 
-    void Update()
+	public void OnTriggerExit2D(Collider2D collision)
+	{
+		Destroy(collision.gameObject);
+	}
+
+	void Update()
     {
         hold = false;
         //#if UNITY_ANDROID
