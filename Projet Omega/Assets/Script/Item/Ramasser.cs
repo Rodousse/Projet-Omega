@@ -2,15 +2,14 @@
 using System.Collections;
 
 public class Ramasser : MonoBehaviour {
-    Move scriptPlayer;
-    // Use this for initialization
+	tk2dUIItem UI_Component;
+	Move scriptPlayer;
+
     void Start () {
         scriptPlayer = FindObjectOfType<Move>();
-    }
-	
-	// Update is called once per frame
-	void Update () {
-	
+
+		UI_Component = gameObject.AddComponent<tk2dUIItem>();
+		UI_Component.OnClick += ClickManager.Instance.ClickOn_Background;
 	}
 
     void OnTriggerEnter2D(Collider2D coll)

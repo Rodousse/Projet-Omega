@@ -20,11 +20,11 @@ AnimationClip:
       m_Curve:
       - time: 0
         value: 0
-        inSlope: -450
-        outSlope: -450
+        inSlope: -500
+        outSlope: -500
         tangentMode: 10
       - time: 1
-        value: -450
+        value: -500
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -72,11 +72,11 @@ AnimationClip:
       m_Curve:
       - time: 0
         value: 0
-        inSlope: -450
-        outSlope: -450
+        inSlope: -500
+        outSlope: -500
         tangentMode: 10
       - time: 1
-        value: -450
+        value: -500
         inSlope: 0
         outSlope: 0
         tangentMode: 0

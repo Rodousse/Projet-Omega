@@ -87,14 +87,18 @@ PlayerSettings:
     Others: 1
   bundleIdentifier: com.SYR.Omega
   bundleVersion: 1.0
-  preloadedAssets: []
+  preloadedAssets:
+  - {fileID: 2800000, guid: 3570ab1ac13ca794a881d98939f3d265, type: 3}
+  - {fileID: 2800000, guid: bb4807a203f77e84993518d56822f8dc, type: 3}
+  - {fileID: 2800000, guid: e0e9980ad01771d4da29a629c90830f5, type: 3}
+  - {fileID: 2800000, guid: 69393085b1ca23b46a3db2b5e9eddf1a, type: 3}
   metroEnableIndependentInputSource: 0
   metroEnableLowLatencyPresentationAPI: 0
   xboxOneDisableKinectGpuReservation: 0
   virtualRealitySupported: 0
   productGUID: e35cace070faa2d4b8ae2c9e894fc041
   AndroidBundleVersionCode: 1
-  AndroidMinSdkVersion: 22
+  AndroidMinSdkVersion: 14
   AndroidPreferredInstallLocation: 0
   aotOptions: 
   apiCompatibilityLevel: 1

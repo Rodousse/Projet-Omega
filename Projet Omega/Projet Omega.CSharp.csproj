@@ -223,6 +223,7 @@
     <Compile Include="Assets\Custom Assets\Standard Assets\Effects\ImageEffects\Scripts\Twirl.cs" />
     <Compile Include="Assets\Custom Assets\Standard Assets\Effects\ImageEffects\Scripts\VignetteAndChromaticAberration.cs" />
     <Compile Include="Assets\Custom Assets\Standard Assets\Effects\ImageEffects\Scripts\Vortex.cs" />
+    <Compile Include="Assets\Graphismes\SpriteCollection\Decors Data\NoAudio.cs" />
     <Compile Include="Assets\Script\Accueil\NomSave.cs" />
     <Compile Include="Assets\Script\Accueil\Reset.cs" />
     <Compile Include="Assets\Script\Editeur\ChoixEvents.cs" />

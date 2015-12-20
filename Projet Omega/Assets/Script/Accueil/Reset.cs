@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEditor;
 using System.Collections;
 using UnityEngine.UI;
 
@@ -21,8 +22,10 @@ public class Reset : MonoBehaviour {
 
     public void Clicked()
     {
-        PlayerPrefs.SetString("Player_Name", ""); //reset du nom (TODO : supprimer les saves)
+		PlayerPrefs.SetInt("Save", 0);
+		PlayerPrefs.SetString("Player_Name", ""); //reset du nom (TODO : supprimer les saves)
         anime.SetTrigger("End");
-        GameObject.Find("InputField").GetComponent<Animator>().SetTrigger("Start");
+		FileUtil.DeleteFileOrDirectory(Application.persistentDataPath);
+		GameObject.Find("InputField").GetComponent<Animator>().SetTrigger("Start");
     }
 }

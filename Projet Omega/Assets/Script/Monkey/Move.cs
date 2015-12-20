@@ -191,8 +191,6 @@ public class Move : MonoBehaviour {
 		isGrounded = groundCheck.IsTouchingLayers(LayerMask.GetMask("TileMap"));
         animator.SetBool("Grounded", isGrounded);
 
-		Debug.Log("Maj check");
-
 		if (isFacingRight)
 		{
 			isWalled = wallCheckR.IsTouchingLayers(LayerMask.GetMask("TileMap"));

@@ -81,7 +81,7 @@ public class ClickManager : Singleton<ClickManager> {
         }
     }
 
-    void ClickOn_Background()
+    public void ClickOn_Background()
 	{
         if(!hold && scriptPlayer != null)
 		    scriptPlayer.SetfinalDestination();

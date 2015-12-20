@@ -11,6 +11,7 @@ public class Essayer_Button : MonoBehaviour {
 	public Texture2D Play_Sprite, Pause_Sprite;
 	public RawImage[] DeActivables;
 	public Image[] DeActivablesImages;
+	public GameObject Player;
 
 	void Start () {
 		TileMap = FindObjectOfType<tk2dTileMap>();
@@ -55,5 +56,6 @@ public class Essayer_Button : MonoBehaviour {
 		State = false;
 		TileMap.BeginEditMode();
 		TileMap.EndEditMode();
+		Player.transform.position = new Vector3(5,2.5f,-5);
 	}
 }
