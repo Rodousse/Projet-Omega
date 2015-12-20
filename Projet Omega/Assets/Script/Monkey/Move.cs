@@ -75,11 +75,17 @@ public class Move : MonoBehaviour {
 		}
 	}
 
-	void FixedUpdate()
+    void Update()
+    {
+        UpdateSpeed();
+        UpdateCheckers();
+    }
+
+    void FixedUpdate()
 	{
 
-		UpdateSpeed();
-		UpdateCheckers();
+        UpdateSpeed();
+        UpdateCheckers();
         reception();
 		if (jump) // Si on veux faire sauter le personnage
 		{
@@ -109,7 +115,7 @@ public class Move : MonoBehaviour {
 				{
 					if (isWalled)  // si on rencontre un mur
 					{
-                        if (canJump) // et si on veut sauter
+                        if (canJump) // et si il n'y a pas de caisse au dessus
                         {
                             if (destination.x > transform.position.x + 1.25f || destination.x < transform.position.x - 1.25f)
                                 willJump = true; // Si la destination est au prochain "cube" de distance On fait sauter le mur
@@ -189,14 +195,18 @@ public class Move : MonoBehaviour {
 		if (isFacingRight)
 		{
 			isWalled = wallCheckR.IsTouchingLayers(LayerMask.GetMask("TileMap"));
-			canJump = !wallCheckTopR.IsTouchingLayers(LayerMask.GetMask("TileMap"));
-		}
-		else
+            canJump = !Physics2D.Linecast(transform.position, wallCheckTopR.transform.position, 1 << LayerMask.NameToLayer("TileMap"));
+            //canJump = !wallCheckTopR.IsTouchingLayers(LayerMask.GetMask("TileMap"));
+
+        }
+        else
 		{
 			isWalled = wallCheckL.IsTouchingLayers(LayerMask.GetMask("TileMap"));
-			canJump = !wallCheckTopL.IsTouchingLayers(LayerMask.GetMask("TileMap"));
-		}
-	}
+            canJump = !Physics2D.Linecast(transform.position, wallCheckTopL.transform.position, 1 << LayerMask.NameToLayer("TileMap"));
+            //canJump = !wallCheckTopL.IsTouchingLayers(LayerMask.GetMask("TileMap"));
+
+        }
+    }
 
 	void UpdateFacing()
 	{
@@ -207,18 +217,22 @@ public class Move : MonoBehaviour {
 			isFacingRight = true;
 			sens = 1;
 			GetComponentInChildren<Puppet2D_GlobalControl>().flip = false;
-			isWalled = wallCheckL.IsTouchingLayers(LayerMask.GetMask("TileMap"));
-			canJump = !wallCheckTopL.IsTouchingLayers(LayerMask.GetMask("TileMap"));
-		}
-		else
+			isWalled = wallCheckR.IsTouchingLayers(LayerMask.GetMask("TileMap"));
+            canJump = !Physics2D.Linecast(transform.position, wallCheckTopR.transform.position, 1 << LayerMask.NameToLayer("TileMap"));
+
+            //canJump = !wallCheckTopR.IsTouchingLayers(LayerMask.GetMask("TileMap"));
+        }
+        else
 		{
 			isFacingRight = false;
 			sens = -1;
 			GetComponentInChildren<Puppet2D_GlobalControl>().flip = true;
-			isWalled = wallCheckR.IsTouchingLayers(LayerMask.GetMask("TileMap"));
-			canJump = !wallCheckTopR.IsTouchingLayers(LayerMask.GetMask("TileMap"));
-		}
-	}
+			isWalled = wallCheckL.IsTouchingLayers(LayerMask.GetMask("TileMap"));
+            canJump = !Physics2D.Linecast(transform.position, wallCheckTopL.transform.position, 1 << LayerMask.NameToLayer("TileMap"));
+
+            //canJump = !wallCheckTopL.IsTouchingLayers(LayerMask.GetMask("TileMap"));
+        }
+    }
 
 	float RoundAbout(float INPUT, float x)
 	{
