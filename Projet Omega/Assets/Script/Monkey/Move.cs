@@ -84,8 +84,8 @@ public class Move : MonoBehaviour {
     void FixedUpdate()
 	{
 
-        UpdateSpeed();
-        UpdateCheckers();
+        //UpdateSpeed();
+        //UpdateCheckers();
         reception();
 		if (jump) // Si on veux faire sauter le personnage
 		{
@@ -106,7 +106,6 @@ public class Move : MonoBehaviour {
 		}
 		else
 		{
-            //UpdateFacing();
 			if (isGrounded) // Conditions préalables pour avancer
 			{
 				isJumping = false;
@@ -115,13 +114,13 @@ public class Move : MonoBehaviour {
 				{
 					if (isWalled)  // si on rencontre un mur
 					{
-                        if (canJump) // et si il n'y a pas de caisse au dessus
-                        {
-                            if (destination.x > transform.position.x + 1.25f || destination.x < transform.position.x - 1.25f)
-                                willJump = true; // Si la destination est au prochain "cube" de distance On fait sauter le mur
-                        }
-                        else // si il y a un mur on arrete d'avancer
-                            finalDestination = new Vector3(RoundAbout(transform.position.x, 2.5f), RoundAbout(transform.position.y, 2.5f), finalDestination.z) ;
+						if (canJump) // et si il n'y a pas de caisse au dessus
+						{
+							if (destination.x > transform.position.x + 1.25f || destination.x < transform.position.x - 1.25f)
+								willJump = true; // Si la destination est au prochain "cube" de distance On fait sauter le mur
+						}
+						else // si il y a un mur on arrete d'avancer
+							finalDestination = new Vector3(RoundAbout(transform.position.x, 2.5f), RoundAbout(transform.position.y, 2.5f), finalDestination.z) ;
 
 						// et on recentre sa position
 						destination.x = RoundAbout(transform.position.x, 2.5f);
@@ -192,21 +191,21 @@ public class Move : MonoBehaviour {
 		isGrounded = groundCheck.IsTouchingLayers(LayerMask.GetMask("TileMap"));
         animator.SetBool("Grounded", isGrounded);
 
+		Debug.Log("Maj check");
+
 		if (isFacingRight)
 		{
 			isWalled = wallCheckR.IsTouchingLayers(LayerMask.GetMask("TileMap"));
-            canJump = !Physics2D.Linecast(transform.position, wallCheckTopR.transform.position, 1 << LayerMask.NameToLayer("TileMap"));
-            //canJump = !wallCheckTopR.IsTouchingLayers(LayerMask.GetMask("TileMap"));
+            canJump = !wallCheckTopR.IsTouchingLayers(LayerMask.GetMask("TileMap"));
 
         }
         else
 		{
 			isWalled = wallCheckL.IsTouchingLayers(LayerMask.GetMask("TileMap"));
-            canJump = !Physics2D.Linecast(transform.position, wallCheckTopL.transform.position, 1 << LayerMask.NameToLayer("TileMap"));
-            //canJump = !wallCheckTopL.IsTouchingLayers(LayerMask.GetMask("TileMap"));
+            canJump = !wallCheckTopL.IsTouchingLayers(LayerMask.GetMask("TileMap"));
 
         }
-    }
+	}
 
 	void UpdateFacing()
 	{
@@ -218,9 +217,7 @@ public class Move : MonoBehaviour {
 			sens = 1;
 			GetComponentInChildren<Puppet2D_GlobalControl>().flip = false;
 			isWalled = wallCheckR.IsTouchingLayers(LayerMask.GetMask("TileMap"));
-            canJump = !Physics2D.Linecast(transform.position, wallCheckTopR.transform.position, 1 << LayerMask.NameToLayer("TileMap"));
-
-            //canJump = !wallCheckTopR.IsTouchingLayers(LayerMask.GetMask("TileMap"));
+            canJump = !wallCheckTopR.IsTouchingLayers(LayerMask.GetMask("TileMap"));
         }
         else
 		{
@@ -228,11 +225,9 @@ public class Move : MonoBehaviour {
 			sens = -1;
 			GetComponentInChildren<Puppet2D_GlobalControl>().flip = true;
 			isWalled = wallCheckL.IsTouchingLayers(LayerMask.GetMask("TileMap"));
-            canJump = !Physics2D.Linecast(transform.position, wallCheckTopL.transform.position, 1 << LayerMask.NameToLayer("TileMap"));
-
-            //canJump = !wallCheckTopL.IsTouchingLayers(LayerMask.GetMask("TileMap"));
+            canJump = !wallCheckTopL.IsTouchingLayers(LayerMask.GetMask("TileMap"));
         }
-    }
+	}
 
 	float RoundAbout(float INPUT, float x)
 	{

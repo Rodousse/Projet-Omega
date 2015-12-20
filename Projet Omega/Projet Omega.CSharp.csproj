@@ -238,12 +238,15 @@
     <Compile Include="Assets\Script\Item\Caisse_Bois.cs" />
     <Compile Include="Assets\Script\Item\FinalDestroy.cs" />
     <Compile Include="Assets\Script\Item\Ramasser.cs" />
+    <Compile Include="Assets\Script\LoadLevelSpec.cs" />
     <Compile Include="Assets\Script\Managers\ClickManager.cs" />
     <Compile Include="Assets\Script\Managers\FileManager.cs" />
     <Compile Include="Assets\Script\Managers\PlatformSpecific.cs" />
     <Compile Include="Assets\Script\Monkey\Detector.cs" />
     <Compile Include="Assets\Script\Monkey\Move.cs" />
+    <Compile Include="Assets\Script\UI\Audio.cs" />
     <Compile Include="Assets\Script\UI\EndLevel.cs" />
+    <Compile Include="Assets\Script\UI\LoadLevel.cs" />
     <Compile Include="Assets\Script\UI\Play.cs" />
     <Compile Include="Assets\Script\UI\RestartButton.cs" />
   </ItemGroup>

@@ -246,8 +246,8 @@ MonoBehaviour:
     colliderType: 2
     customColliders: []
     colliderVertices:
-    - {x: 0, y: 0, z: 0}
-    - {x: 1.25, y: 1.25, z: .100000001}
+    - {x: .00499999523, y: .00499999523, z: 0}
+    - {x: 1.23500001, y: 1.22500002, z: .100000001}
     colliderIndicesFwd: 
     colliderIndicesBack: 
     colliderConvex: 0
@@ -996,7 +996,7 @@ MonoBehaviour:
   loadable: 0
   invOrthoSize: 2
   halfTargetHeight: 50
-  buildKey: 891073017
+  buildKey: 4024227
   dataGuid: b63d55b48435c9047a878d0fd77c652e
   managedSpriteCollection: 0
   hasPlatformData: 0

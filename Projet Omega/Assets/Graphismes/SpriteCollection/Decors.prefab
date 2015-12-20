@@ -41,25 +41,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textures: []
   textureRefs: []
-  spriteSheets:
-  - texture: {fileID: 0}
-    tilesX: 0
-    tilesY: 0
-    numTiles: 0
-    anchor: 4
-    pad: 0
-    scale: {x: 1, y: 1, z: 1}
-    additive: 0
-    active: 1
-    tileWidth: 0
-    tileHeight: 0
-    tileMarginX: 0
-    tileMarginY: 0
-    tileSpacingX: 0
-    tileSpacingY: 0
-    splitMethod: 0
-    version: 1
-    colliderType: 0
+  spriteSheets: []
   fonts: []
   defaults:
     additive: 0
@@ -250,11 +232,20 @@ MonoBehaviour:
     regionW: 0
     regionH: 0
     regionId: 0
-    colliderType: 2
+    colliderType: 3
     colliderData: []
-    boxColliderMin: {x: 0, y: 0}
-    boxColliderMax: {x: 0, y: 0}
-    polyColliderIslands: []
+    boxColliderMin: {x: 2, y: 2}
+    boxColliderMax: {x: 249, y: 247}
+    polyColliderIslands:
+    - connected: 1
+      points:
+      - {x: 0, y: 0}
+      - {x: 0, y: 250}
+      - {x: 250, y: 250}
+      - {x: 124, y: 119}
+      - {x: 0, y: 250}
+      - {x: 250, y: 250}
+      - {x: 250, y: 0}
     polyColliderCap: 1
     colliderConvex: 0
     colliderSmoothSphereCollisions: 0
