@@ -10,11 +10,7 @@ public class EndLevel : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-
-		Debug.Log(PlayerPrefs.GetInt("Save"));
-
-
-		if (PlayerPrefs.GetInt("Save") <= nbLevel)
+        if (PlayerPrefs.GetInt("Save") <= nbLevel)
             PlayerPrefs.SetInt("Save", nbLevel);
         scriptPlayer = GameObject.Find("Monkey").GetComponent<Move>();
     }

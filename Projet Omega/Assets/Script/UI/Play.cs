@@ -15,6 +15,7 @@ public class Play : MonoBehaviour {
 	}
     public void start()
     {
+        PlayerPrefs.SetInt("Save", 0);
         Application.LoadLevel("Load");
     }
     public void editeur()
