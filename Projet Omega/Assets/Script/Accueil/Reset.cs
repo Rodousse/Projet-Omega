@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
-using UnityEditor;
-using System.Collections;
-using UnityEngine.UI;
+using System;
+using System.IO;
 
 public class Reset : MonoBehaviour {
     Animator anime;
@@ -25,7 +24,15 @@ public class Reset : MonoBehaviour {
 		PlayerPrefs.SetInt("Save", 0);
 		PlayerPrefs.SetString("Player_Name", ""); //reset du nom (TODO : supprimer les saves)
         anime.SetTrigger("End");
-		FileUtil.DeleteFileOrDirectory(Application.persistentDataPath);
+		
+		foreach (string file in Directory.GetFiles(Application.persistentDataPath))
+		{
+			File.SetAttributes(file, FileAttributes.Normal);
+			File.Delete(file);
+		}
+
+		Directory.Delete(Application.persistentDataPath);
+
 		GameObject.Find("InputField").GetComponent<Animator>().SetTrigger("Start");
     }
 }
