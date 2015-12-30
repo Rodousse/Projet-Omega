@@ -6,6 +6,7 @@ public class NomSave : MonoBehaviour {
     
 	// Use this for initialization
 	void Start () {
+		Debug.Log(PlayerPrefs.GetInt("Save"));
 
 		anime = this.GetComponent<Animator>();
         if (PlayerPrefs.GetString("Player_Name") == "")
