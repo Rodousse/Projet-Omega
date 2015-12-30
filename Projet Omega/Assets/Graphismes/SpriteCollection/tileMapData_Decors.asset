@@ -17,7 +17,7 @@ MonoBehaviour:
   colorMode: 0
   sortMethod: 0
   generateUv2: 0
-  layersFixedZ: 1
+  layersFixedZ: 0
   useSortingLayers: 0
   tilePrefabs:
   - {fileID: 0}
@@ -160,20 +160,9 @@ MonoBehaviour:
     hash: 748115119
     useColor: 1
     generateCollider: 1
-    z: .400000006
+    z: 5
     unityLayer: 8
     sortingLayerName: Default
-    sortingOrder: 0
-    skipMeshGeneration: 0
-    physicMaterial: {fileID: 0}
-    physicsMaterial2D: {fileID: 0}
-  - name: Light
-    hash: 1241270122
-    useColor: 1
-    generateCollider: 1
-    z: -10.4200001
-    unityLayer: 8
-    sortingLayerName: 
     sortingOrder: 0
     skipMeshGeneration: 0
     physicMaterial: {fileID: 0}

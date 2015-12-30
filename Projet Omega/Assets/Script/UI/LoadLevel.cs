@@ -8,22 +8,21 @@ public class LoadLevel : MonoBehaviour {
     RectTransform viewPort;
     // Use this for initialization
     void Start () {
-		save = PlayerPrefs.GetInt("Save");
-		viewPort = GetComponent<RectTransform>();
-
-		Debug.Log(save);
-
-		for (int i = 0; i <= save;  i++)
+        save = 8;// PlayerPrefs.GetInt("Save");
+        
+        GameObject actualLevel;
+        for (int i = 0; i <= save;  i++)
         {
-			GameObject actualLevel = Instantiate(level) as GameObject;
-			actualLevel.transform.SetParent(transform, false);
-			actualLevel.GetComponent<RectTransform>().localPosition -= new Vector3(0, viewPort.sizeDelta.y, 0);
-			
+            actualLevel = Instantiate(level) as GameObject;
+            actualLevel.transform.SetParent(transform);
+            Debug.Log(i);
             actualLevel.GetComponent<LoadLevelSpec>().level = "level" + i.ToString();
             actualLevel.GetComponentInChildren<Text>().text = "Level " + i.ToString();
-
-            viewPort.sizeDelta = new Vector2(viewPort.sizeDelta.x, viewPort.sizeDelta.y + 250);
-		}
+            Vector2 translate = new Vector2(0, -actualLevel.GetComponent<RectTransform>().sizeDelta.y * i);
+            actualLevel.GetComponent<RectTransform>().transform.Translate(translate);
+            viewPort = gameObject.GetComponent<RectTransform>();
+            viewPort.sizeDelta += new Vector2(0, actualLevel.GetComponent<RectTransform>().sizeDelta.y);
+        }
 
     }
 	

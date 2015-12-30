@@ -164,7 +164,6 @@ GameObject:
   - 92: {fileID: 950984505}
   - 124: {fileID: 950984504}
   - 81: {fileID: 950984503}
-  - 114: {fileID: 950984508}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -239,17 +238,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!114 &950984508
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 950984502}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 14fcbc19b5b318241b8081da4ec2823c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1097705170
 GameObject:
   m_ObjectHideFlags: 0
@@ -294,6 +282,7 @@ GameObject:
   - 223: {fileID: 1204328026}
   - 114: {fileID: 1204328025}
   - 114: {fileID: 1204328024}
+  - 114: {fileID: 1204328027}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -350,7 +339,7 @@ MonoBehaviour:
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1280, y: 720}
-  m_ScreenMatchMode: 1
+  m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
@@ -373,6 +362,18 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
+--- !u!114 &1204328027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1204328022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d9953a3c9b917a4b90d52e3178a40dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  level: {fileID: 0}
 --- !u!1 &1345201466
 GameObject:
   m_ObjectHideFlags: 0
@@ -516,10 +517,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1820563961}
   m_RootOrder: 0
-  m_AnchorMin: {x: 0, y: .5}
-  m_AnchorMax: {x: 0, y: .5}
-  m_AnchoredPosition: {x: .000122070312, y: 3.05175781e-05}
-  m_SizeDelta: {x: 1263, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1515624644
 MonoBehaviour:
@@ -567,8 +568,8 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: -2.28881836e-05, y: -.000967025757}
-  m_SizeDelta: {x: 1280, y: 800}
+  m_AnchoredPosition: {x: -2.28881836e-05, y: .00141911465}
+  m_SizeDelta: {x: 1280, y: 719.890015}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1624864546
 MonoBehaviour:
@@ -615,7 +616,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Content: {fileID: 1515624643}
-  m_Horizontal: 0
+  m_Horizontal: 1
   m_Vertical: 1
   m_MovementType: 1
   m_Elasticity: .100000001
@@ -623,8 +624,8 @@ MonoBehaviour:
   m_DecelerationRate: .135000005
   m_ScrollSensitivity: 1
   m_Viewport: {fileID: 1820563961}
-  m_HorizontalScrollbar: {fileID: 1345201468}
-  m_VerticalScrollbar: {fileID: 0}
+  m_HorizontalScrollbar: {fileID: 0}
+  m_VerticalScrollbar: {fileID: 1345201468}
   m_HorizontalScrollbarVisibility: 2
   m_VerticalScrollbarVisibility: 2
   m_HorizontalScrollbarSpacing: -3
