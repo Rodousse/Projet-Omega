@@ -6,7 +6,13 @@ public class NomSave : MonoBehaviour {
     
 	// Use this for initialization
 	void Start () {
+<<<<<<< HEAD
         anime = this.GetComponent<Animator>();
+=======
+		Debug.Log(PlayerPrefs.GetInt("Save"));
+
+		anime = this.GetComponent<Animator>();
+>>>>>>> parent of 24d010f... Correction mineures + video
         if (PlayerPrefs.GetString("Player_Name") == "")
             anime.SetTrigger("Start");
     }

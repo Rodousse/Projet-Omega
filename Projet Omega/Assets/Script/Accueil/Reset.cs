@@ -1,4 +1,8 @@
 ﻿using UnityEngine;
+<<<<<<< HEAD
+=======
+using UnityEditor;
+>>>>>>> parent of 24d010f... Correction mineures + video
 using System.Collections;
 using UnityEngine.UI;
 
@@ -23,6 +27,11 @@ public class Reset : MonoBehaviour {
     {
         PlayerPrefs.SetString("Player_Name", ""); //reset du nom (TODO : supprimer les saves)
         anime.SetTrigger("End");
+<<<<<<< HEAD
         GameObject.Find("InputField").GetComponent<Animator>().SetTrigger("Start");
+=======
+		FileUtil.DeleteFileOrDirectory(Application.persistentDataPath);
+		GameObject.Find("InputField").GetComponent<Animator>().SetTrigger("Start");
+>>>>>>> parent of 24d010f... Correction mineures + video
     }
 }
