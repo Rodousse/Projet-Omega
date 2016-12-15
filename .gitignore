@@ -38,7 +38,7 @@ ehthumbs.db
 # Visual Studio / MonoDevelop generated #
 # ===================================== #
 [Ee]xported[Oo]bj/
-.vs/
+/Projet Omega/vs/
 /*.userprefs
 /*.csproj
 /*.pidb
