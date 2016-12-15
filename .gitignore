@@ -51,9 +51,9 @@ ehthumbs.db
 # =============== #
 # Unity generated #
 # =============== #
-[Tt]emp/
-[Oo]bj/
-[Bb]uild
-[Ll]ibrary/
+/Projet Omega/[Tt]emp/
+/Projet Omega/[Oo]bj/
+/Projet Omega/[Bb]uild
+/Projet Omega/[Ll]ibrary/
 sysinfo.txt
 *.stackdump
