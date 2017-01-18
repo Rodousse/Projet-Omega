@@ -19,11 +19,11 @@ public class PlatformSpecific : MonoBehaviour
 	public void Update()
 	{
 		if (Input.GetKeyDown(KeyCode.Escape))
-			Application.LoadLevel("Menu");
+			UnityEngine.SceneManagement.SceneManager.LoadScene("Menu");
 	}
 
 	public void RetourMenu()
 	{
-		Application.LoadLevel("Menu");
+		UnityEngine.SceneManagement.SceneManager.LoadScene("Menu");
 	}
 }

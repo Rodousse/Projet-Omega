@@ -1,7 +1,6 @@
 #define ENABLE_UNLOAD_MANAGER
 
 using UnityEngine;
-using System.Collections;
 using System.Collections.Generic;
 
 // This is deliberately an ExecuteInEditMode object as opposed to InitializeOnLoad static
@@ -86,8 +85,9 @@ public class tk2dEditorSpriteDataUnloader : MonoBehaviour {
 
 	public string oldScene = "";
 	void EditorUpdate() {
-		if (oldScene != UnityEditor.EditorApplication.currentScene) {
-			oldScene = UnityEditor.EditorApplication.currentScene;
+		if (oldScene != UnityEditor.SceneManagement.EditorSceneManager.GetActiveScene().name) {
+			oldScene = UnityEditor.SceneManagement.EditorSceneManager.GetActiveScene().name;
+			
 			DestroyDisconnectedResources();
 		}
 	}

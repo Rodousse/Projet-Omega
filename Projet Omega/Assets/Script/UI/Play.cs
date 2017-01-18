@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class Play : MonoBehaviour {
 
@@ -16,10 +16,10 @@ public class Play : MonoBehaviour {
     public void start()
     {
         PlayerPrefs.SetInt("Save", 0);
-        Application.LoadLevel("Load");
+        SceneManager.LoadScene("Load");
     }
     public void editeur()
     {
-        Application.LoadLevel("Editeur");
+		SceneManager.LoadScene("Editeur");
     }
 }

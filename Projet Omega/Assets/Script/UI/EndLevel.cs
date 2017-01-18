@@ -26,7 +26,7 @@ public class EndLevel : MonoBehaviour {
         {
             
             if (scriptPlayer.banane)
-                Application.LoadLevel(nextLevel);
+				UnityEngine.SceneManagement.SceneManager.LoadScene(nextLevel);
         }
 
     }

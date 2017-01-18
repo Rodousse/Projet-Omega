@@ -16,6 +16,6 @@ public class LoadLevelSpec : MonoBehaviour {
 
     public void onClick()
     {
-        Application.LoadLevel(level);
+		UnityEngine.SceneManagement.SceneManager.LoadScene(level);
     }
 }

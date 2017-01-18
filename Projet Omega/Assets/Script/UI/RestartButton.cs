@@ -1,6 +1,4 @@
 ﻿using UnityEngine;
-using UnityEngine.UI;
-using System.Collections;
 
 public class RestartButton : MonoBehaviour {
 
@@ -31,6 +29,6 @@ public class RestartButton : MonoBehaviour {
 			vortex.angle = 0;
 
 		if (State && vortex.angle == 180)
-			Application.LoadLevel(Application.loadedLevel);
+			UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
 	}
 }
