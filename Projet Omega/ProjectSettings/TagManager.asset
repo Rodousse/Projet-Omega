@@ -8,6 +8,7 @@ TagManager:
   - Wall
   - Ground
   - Destructible
+  - Audio
   layers:
   - Default
   - TransparentFX
@@ -56,6 +57,9 @@ TagManager:
     locked: 1
   - name: Destructible
     uniqueID: 1621241895
+    locked: 0
+  - name: PremierPlan
+    uniqueID: 854206805
     locked: 0
   - name: Skeleton
     uniqueID: 1823863277

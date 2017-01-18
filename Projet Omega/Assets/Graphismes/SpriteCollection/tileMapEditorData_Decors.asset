@@ -40,13 +40,13 @@ MonoBehaviour:
     - x: 0
       y: 0
       layer: 0
-      spriteId: 7
+      spriteId: 17
       blendAmount: 0
-    multiSelectTiles: 07000000
+    multiSelectTiles: 11000000
     edgeMode: 0
     multiLayer: 0
     overrideWithSpriteBounds: 0
-    brushHash: -2111935424
+    brushHash: -398972736
   brushes: []
   paletteBrush:
     name: 
@@ -54,82 +54,102 @@ MonoBehaviour:
     paintMode: 0
     tiles:
     - x: 0
-      y: 4
+      y: 5
       layer: 0
       spriteId: 0
       blendAmount: 0
     - x: 1
-      y: 4
+      y: 5
       layer: 0
       spriteId: 1
       blendAmount: 0
     - x: 2
-      y: 4
+      y: 5
       layer: 0
       spriteId: 2
       blendAmount: 0
     - x: 0
-      y: 3
+      y: 4
       layer: 0
       spriteId: 3
       blendAmount: 0
     - x: 1
-      y: 3
+      y: 4
       layer: 0
       spriteId: 4
       blendAmount: 0
     - x: 2
-      y: 3
+      y: 4
       layer: 0
       spriteId: 5
       blendAmount: 0
     - x: 0
-      y: 2
+      y: 3
       layer: 0
       spriteId: 6
       blendAmount: 0
     - x: 1
-      y: 2
+      y: 3
       layer: 0
       spriteId: 7
       blendAmount: 0
     - x: 2
-      y: 2
+      y: 3
       layer: 0
       spriteId: 8
       blendAmount: 0
     - x: 0
-      y: 1
+      y: 2
       layer: 0
       spriteId: 9
       blendAmount: 0
     - x: 1
-      y: 1
+      y: 2
       layer: 0
       spriteId: 10
       blendAmount: 0
     - x: 2
-      y: 1
+      y: 2
       layer: 0
       spriteId: 11
       blendAmount: 0
     - x: 0
-      y: 0
+      y: 1
       layer: 0
       spriteId: 12
       blendAmount: 0
     - x: 1
-      y: 0
+      y: 1
       layer: 0
       spriteId: 13
+      blendAmount: 0
+    - x: 2
+      y: 1
+      layer: 0
+      spriteId: 14
+      blendAmount: 0
+    - x: 0
+      y: 0
+      layer: 0
+      spriteId: 15
+      blendAmount: 0
+    - x: 1
+      y: 0
+      layer: 0
+      spriteId: 16
+      blendAmount: 0
+    - x: 2
+      y: 0
+      layer: 0
+      spriteId: 17
       blendAmount: 0
     multiSelectTiles: 
     edgeMode: 0
     multiLayer: 0
     overrideWithSpriteBounds: 1
-    brushHash: 910353604
+    brushHash: -1052609216
   paletteTilesPerRow: 3
-  setupMode: 32
+  setupMode: 4
   showBrush: 1
   showPalette: 1
   layer: 0

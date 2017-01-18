@@ -10,6 +10,8 @@ GameObject:
   - 4: {fileID: 480134}
   - 212: {fileID: 21229560}
   - 108: {fileID: 10871114}
+  - 114: {fileID: 11475862}
+  - 61: {fileID: 6116268}
   m_Layer: 0
   m_Name: Fire
   m_TagString: Untagged
@@ -59,6 +61,19 @@ Transform:
   - {fileID: 457570}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!61 &6116268
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 169594}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 2.5, y: 2.5}
 --- !u!108 &10871114
 Light:
   m_ObjectHideFlags: 1
@@ -91,6 +106,17 @@ Light:
   m_ShadowRadius: 0
   m_ShadowAngle: 0
   m_AreaSize: {x: 1, y: 1}
+--- !u!114 &11475862
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 169594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8c6f7746bfc46e4484efec71270906e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!198 &19885080
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -1223,6 +1249,10 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_RenderMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []

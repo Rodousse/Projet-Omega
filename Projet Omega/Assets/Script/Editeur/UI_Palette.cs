@@ -12,15 +12,15 @@ public class UI_Palette : MonoBehaviour {
 	void Start () {
 		anim = GetComponent<Animator>();
     }
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
-
 	public void Shift()
 	{
 		State = !State;
         anim.SetBool("State", State);
     }
+
+	public void ShiftIN()
+	{
+		State = false;
+		anim.SetBool("State", State);
+	}
 }

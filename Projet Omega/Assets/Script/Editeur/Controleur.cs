@@ -9,15 +9,10 @@ public class SpriteCol : System.Object
 public class Controleur : MonoBehaviour
 {
 	public tk2dTileMap TileMap;
-
 	public GameObject PreviewBloc;
-
 	public Transform PreviewTile;
-
 	public SpriteCol Previews;
-
 	SpriteRenderer PreviewBlocSprite;
-
 	Vector3 MousePosition, BlocPosition;
 
 	int TileID = 0, LayerID = 0, ToolID = 1;
