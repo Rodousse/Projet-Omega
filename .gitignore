@@ -38,7 +38,7 @@ ehthumbs.db
 # Visual Studio / MonoDevelop generated #
 # ===================================== #
 [Ee]xported[Oo]bj/
-.vs/
+/Projet Omega/vs/
 /*.userprefs
 /*.csproj
 /*.pidb
@@ -51,9 +51,9 @@ ehthumbs.db
 # =============== #
 # Unity generated #
 # =============== #
-[Tt]emp/
-[Oo]bj/
-[Bb]uild
-[Ll]ibrary/
+/Projet Omega/[Tt]emp/
+/Projet Omega/[Oo]bj/
+/Projet Omega/[Bb]uild
+/Projet Omega/[Ll]ibrary/
 sysinfo.txt
 *.stackdump
