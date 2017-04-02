@@ -1,8 +1,8 @@
 # Description
 Ce projet a été réalisé dans le cadre de la formation en imagerie numérique à l'IUT du Puy en Velay.
-Une vidéo de présentation est disponible sur youtube : [Trailer](https://www.youtube.com/watch?v=3rCD8HsiAUg)
+Une vidéo de présentation est disponible sur youtube :
 
-![](https://github.com/Rodousse/Projet-Omega/blob/master/Projet%20Omega/Assets/Graphismes/Sprites/Monkey/Tete.png)
+![Trailer](http://img.youtube.com/vi/3rCD8HsiAUg/maxresdefault.jpg)
 
 # Crédits
 Team Omega : [team-omega.net](http://www.team-omega.net/)
